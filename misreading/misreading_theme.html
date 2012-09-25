@@ -1,0 +1,370 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+ 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+  <head> 
+    <link rel="shortcut icon" href="{Favicon}" />
+    {block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+    <title>{Title}{block:SearchPage}: {lang:Search results for SearchQuery}{/block:SearchPage}{block:PostSummary}: {PostSummary}{/block:PostSummary}</title>
+    <!-- Default values -->
+
+    <meta name="text:Disqus Shortname" content="" />
+
+    <link type="text/css" rel="stylesheet" media="all" href="http://www.columbia.edu/cu/arch/books/misreading/misreading.css">
+
+    <style>
+    /* Styling based on Tumblr customizable inputs */
+    
+    {block:IfDisqusShortname}
+    /* Styling for Disqus comments */
+    div#disqus_thread {
+      width: 480px; margin: 0 auto;
+      padding-right: 60px;
+      margin-bottom: 2em;
+      margin-top: -1em;
+    }
+    
+    div#disqus_thread h3 {
+      margin-bottom: 1.5em;
+    }
+    
+    div#disqus_thread div#dsq-comments-title { margin-top: 3em; }
+    
+    body#with-disqus div#it.post {
+      margin-top: 0;
+    }
+    
+    body#with-disqus h1 {
+      margin-bottom: -2em;
+    }
+    
+    body#with-disqus div.realpost {
+      margin-bottom: 0; padding-bottom: 0;
+    }
+    
+    .dsq-comment-header-meta {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    p#powered-by-disqus {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10px;
+      margin-top: 2em;
+      text-transform: uppercase;
+    }
+    
+    div#disqus_thread .dsq-options {
+      display: none;
+    }
+    {/block:IfDisqusShortname}
+    
+    {CustomCSS}
+    </style> 
+    
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://www.columbia.edu/cu/arch/books/misreading/jquery.masonry.min.js"></script>
+    <script type="text/javascript" src="http://www.columbia.edu/cu/arch/books/misreading/arrow_top.js"></script>
+	<script type="text/javascript" src="http://www.columbia.edu/cu/arch/books/misreading/truncator.js"></script>
+	<script type="text/javascript" src="http://www.columbia.edu/cu/arch/books/misreading/jquery.infinitescroll.min.js"></script>
+	<script type="text/javascript" src="http://www.columbia.edu/cu/arch/books/misreading/misreading.js"></script>
+	
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			var MAX_CAPTION_LENGTH = 400;
+			var MAX_TEXTPOST_LENGTH = 500;
+			var MAX_QUOTEPOST_LENGTH = 200;
+			
+			
+			$('.brickwall .caption').truncate({max_length: MAX_CAPTION_LENGTH});
+	    	$('.brickwall .text-body').truncate({max_length: MAX_TEXTPOST_LENGTH});
+	      	$('.brickwall .post.quote .realpost').truncate({max_length: MAX_QUOTEPOST_LENGTH});
+		    
+
+
+
+			var $container = $('#main .brickwall');
+
+			$container.imagesLoaded( function(){
+				$container.masonry({
+					itemSelector: '.post',
+					columnWidth: 400,
+					gutterWidth: 80,
+					isAnimated: false,
+					isFitWidth: true
+				});
+			});
+
+			$container.infinitescroll({
+				navSelector  : '#page-nav',    // selector for the paged navigation 
+				nextSelector : '#page-nav a',  // selector for the NEXT link (to page 2)
+				itemSelector : '.postwrapper',     // selector for all items you'll retrieve
+				loading: {
+					finishedMsg: 'No more pages to load.',
+					img: 'http://i.imgur.com/6RMhx.gif'
+					}
+				},
+				// trigger Masonry as a callback
+				function( newElements ) {
+				// hide new items while they are loading
+					var $newElems = $( newElements ).css({ opacity: 0 });
+
+					$newElems.find('.caption').truncate({max_length: MAX_CAPTION_LENGTH});
+	    			$newElems.find('.text-body').truncate({max_length: MAX_TEXTPOST_LENGTH});
+	      			$newElems.find('.post.quote .realpost').truncate({max_length: MAX_QUOTEPOST_LENGTH});
+
+					//$newElems.truncation();
+					// ensure that images load before adding to masonry layout
+					$newElems.imagesLoaded(function(){
+					// show elems now they're ready
+						$newElems.animate({ opacity: 1 });
+						$container.masonry( 'appended', $newElems, true ); 
+					});
+
+				}
+			);
+
+
+
+
+		});
+	</script>
+
+
+	<!-- fonts.com Fute font -->
+	<script type="text/javascript" src="http://fast.fonts.com/jsapi/709d5c75-086f-4337-aa2d-9c2ed878ed64.js"></script>
+  </head> 
+  
+
+  <body{block:PermalinkPage} class="permalink-page"{/block:PermalinkPage}> 
+  
+  
+
+  <div id="header">
+  	<div id="header-inside">
+	  	<div id="search-container">
+	  		Search
+		  	<form action="/search" method="get">
+			    <input type="text" name="q" value="{SearchQuery}"/>
+			    <input class="hidden" type="submit" value="Search"/>
+			</form>
+		</div><!-- /#search-container -->
+		<a id="logo" href="/"><img src="http://www.columbia.edu/cu/arch/books/Books-logo.png"></a>
+		<div id="navigation"></div>
+	</div>
+</div> 
+
+  <div id="wrapper">  
+    
+    <h1><a>Misreading</a> / <a>Reading</a></h1>
+
+  <div id="main">
+    {block:SearchPage}
+    <div class="post search">
+    <span class="permalink">{lang:Search}</span>
+    <div class="realpost">
+        {block:SearchResults}
+            {lang:SearchResultCount results for SearchQuery 2}.
+        {/block:SearchResults}
+        {block:NoSearchResults}
+            {lang:No search results for SearchQuery 2}.
+        {/block:NoSearchResults}
+    </div></div>
+    {/block:SearchPage}
+    
+    
+    
+    
+    
+
+<div class = "autopagerize_page_element{block:IndexPage} brickwall{/block:IndexPage}" >
+
+
+
+    {block:Posts}
+	<div class="post">
+
+		<a href='{Permalink}' class="hidden-permalink">{lang:Read More}</a>
+
+
+		<div class="post-date">{block:Date}{MonthNumberWithZero}.{DayOfMonthWithZero}.{Year}{/block:Date}</div>
+		
+		
+		
+		{block:Link}
+		<div class="link">
+		  <h2><a href="{URL}">{Name}</a></h2>
+		</div>
+		{/block:Link}
+		
+		
+		
+		
+		{block:Answer}
+		<div class="answer">
+		  <div class="question">{lang:Asker asked}: {Question}</div>
+		  {Answer}
+		</div>
+		{/block:Answer}
+		
+		
+	
+		
+		{block:Chat}
+		<div class="chat">
+			{block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+			<ol>
+			  {block:Lines}
+			  <li>{block:Label}<span class="label">{Label}</span>{/block:Label}
+			  {Line}</li>
+			  {/block:Lines}
+			</ol>
+		</div>
+		{/block:Chat}
+		
+		
+		
+		
+		{block:Video}
+		<div class="video">
+		  <div class="embed-container">{Video-500}</div>
+		</div>
+		{/block:Video}
+		
+	
+	
+	   	{block:Photoset}
+		<div class="photoset">
+			{Photoset-400}
+		</div>
+		{/block:Photoset}    
+		
+		
+		
+		
+		
+		{block:Audio}
+		<div class="audio">
+		  {block:AlbumArt}
+		  <div class="albumart">
+		  	<img src="{AlbumArtURL}" alt="{block:Artist}{Artist}{/block:Artist}{block:TrackName} - {TrackName}{/block:TrackName}" class="album-art" />
+		  </div>	
+		  {/block:AlbumArt}
+		  <div class="audioplayer">{AudioPlayerBlack}</div>
+		</div>
+		{/block:Audio}
+		
+		
+		
+		
+		{block:Photo}
+		<div class="photo">
+			{LinkOpenTag}
+				<img src="{PhotoURL-400}" alt="{PhotoAlt}"/>
+			{LinkCloseTag}
+		</div>
+		{/block:Photo}
+		
+		
+		
+		
+		{block:Quote}
+		<div class="quote">
+			<blockquote class="thequote">{Quote}</blockquote>
+			{block:Source}{Source}{/block:Source}
+		</div>{/block:Quote}
+		
+		
+		
+		
+		{block:Text}
+		<div class="text">
+			{block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+			<div class="text-body">{Body}</div>
+		</div>
+		{/block:Text}
+		
+		
+	
+	{block:Caption}<div class="caption"><div class="caption-text">{Caption}</div></div>{/block:Caption}
+	{block:Description}<div class="caption">{Description}</div>{/block:Description}
+
+	{block:HasTags}
+	 	<ul class="tags"> 
+	 	{block:Tags}
+			<li><a class="tag" href="{TagURL}">{Tag}</a></li>
+	  	{/block:Tags}
+	  	</ul>
+	{/block:HasTags}
+			 
+	</div><!-- /.post --> 
+    {/block:Posts}
+    
+   	
+   	</div><!-- /.brickwall -->
+
+
+
+    
+    
+    
+    {block:IfDisqusShortname}
+      {block:Permalink}
+      <div id="disqus_thread">
+      <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
+      <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
+      <p id="powered-by-disqus">{lang:Blog comments powered by Disqus 2}</p>
+      </div>
+      {/block:Permalink}
+    {/block:IfDisqusShortname}
+    
+    {PostNotes}
+    
+    
+ <!-- 
+    {block:IndexPage}
+    {block:Pagination}
+      <div id="pager">
+      {block:NextPage}<a href="{NextPage}" id="past">&laquo; {lang:Older}</a>{/block:NextPage}
+      {block:PreviousPage}<a href="{PreviousPage}" id="future">{lang:Newer} &raquo;</a>{/block:PreviousPage}
+    </div>
+    {/block:Pagination}
+    {/block:IndexPage}
+    
+    
+    <div id="foot"> 
+    <ul id="bottom">
+      <li><a href="http://arch.columbia.edu">GSAPP</a></li> 
+
+    </ul> 
+    <form action="/search" method="get"> 
+    <input type="text" name="q" value="{lang:Search}" onclick="javascript:if (this.value == '{lang:Search}') this.value = '';"/> 
+    </form> 
+    </div>
+-->    
+
+  
+  {block:IfDisqusShortname}
+        <script type="text/javascript">
+            //<![CDATA[
+            (function() {
+                var links = document.getElementsByTagName('a');
+                var query = '?';
+                for(var i = 0; i < links.length; i++) {
+                    if(links[i].href.indexOf('#disqus_thread') >= 0) {
+                        query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+                    }
+                }
+                document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
+            })();
+            //]]>
+        </script>
+    {/block:IfDisqusShortname}
+
+    {block:Pagination}
+    	{block:NextPage}<div id="page-nav"><a href="{NextPage}" target="_self">Next Page</a></div>{/block:NextPage}
+	{/block:Pagination}
+	</div><!-- /#main -->
+  </body>
+</html>
