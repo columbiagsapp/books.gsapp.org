@@ -3,14 +3,14 @@ body {
         margin: 0;
         color:blue;
         font-weight: normal !important;
-      	font: 11px/15px 'Fute PL W01 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      	font: 11px/16px 'Fute PL W01 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
 
 .misreading, .misreading a{
   color:blue;
 }
 .reading, .reading a{
-  color:#7b7be8;
+  color:#824ad2;
 }
     
     h1{
