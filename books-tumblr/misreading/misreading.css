@@ -87,7 +87,7 @@ body {
       position: fixed;
       overflow: hidden;
       margin-bottom:100px;
-      z-index: 10000;
+      z-index: 1000;
     }
 
     #header-inside{
@@ -251,6 +251,10 @@ html[xmlns] .clearfix {
 .tags .tag{
   border:none !important;
 
+}
+
+a:hover.tag, a:hover.tags {
+  border-bottom: solid 1px !important;
 }
 
 .post .embed-container object,
