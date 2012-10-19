@@ -31,18 +31,35 @@
         </div><!-- /#search-container -->
       <?php endif; ?>
 
-      <?php if ($logo): ?>
-        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" id="logo">
-          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-        </a>
-      <?php endif; ?>
+      <div id="logo-nav">
 
-      <?php if (!empty($navigation)): ?>
-        <nav id="navigation" role="navigation" class="clearfix ">
-            <?php print $navigation ?>
-        </nav> <!-- /#navigation -->
-      <?php endif; ?>
+        <?php if ($logo): ?>
+          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" id="logo">
+            <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+          </a>
+        <?php endif; ?>
+
+        <?php if (!empty($navigation)): ?>
+          <nav id="navigation" role="navigation" class="clearfix ">
+              <?php print $navigation ?>
+          </nav> <!-- /#navigation -->
+        <?php endif; ?>
+
+      </div> <!-- /#logo-nav -->
+
+
+       <div id="sortbox">
+        <div class="sortbox-title">
+          Sort index by</div>
+        <ul id="highlight">
+        </ul>
+        <ul id="dropdown">
+        </ul>
+      </div>
+
       </div> <!-- /#header-inside -->
+
+
     </header> <!-- /#header -->
 
 

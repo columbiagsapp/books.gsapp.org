@@ -155,6 +155,54 @@ th { padding-right: 1em; }
   background: transparent url("http://www.columbia.edu/cu/arch/books/assets/rhinoBG.png") no-repeat 0 0;
 }
 
+/* sort by block */
+#sortbox{
+  text-align: left;
+  display: block;
+  width: 149px;
+  padding:26px 0 0 0;
+  margin:0;
+  float: right;
+  font-size:11px;
+  line-height: 15px;
+}
+
+#sortbox a{
+  border:none;
+}
+
+.sortbox-title{
+  padding-bottom: 3px;
+}
+
+#highlight{
+  border:2px solid black;
+  height:17px;
+  list-style: none !important;
+  padding:0 !important;
+  margin:0 !important;
+  background-color: white;
+}
+
+#highlight li,
+#dropdown li{
+  padding:0 !important;
+  margin:0 0 3px;
+  width:100%;
+  text-align: center;
+}
+
+#dropdown {
+  list-style: none !important;
+  border-bottom:2px solid black;
+  border-right:2px solid black;
+  border-left:2px solid black;
+  width: 145px;
+  padding:10px 0 7px !important;
+  margin:0 !important;
+  background-color: white;
+}
+
 #search-container{
   text-align: left;
   display: block;
