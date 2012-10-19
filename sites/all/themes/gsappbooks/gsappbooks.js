@@ -14,6 +14,15 @@ $(document).ready(function () {
 		}
 	});
 
+	var hoverOnImage = function(){
+		$(this).css('opacity',0.5);
+	}
+
+	var hoverOffImage = function(){
+		$(this).css('opacity',1);
+	}
+
+	$('#main a img').hover(hoverOnImage, hoverOffImage);
 
 	//check if Index by Date is the current page, then init if so
 	if($('.view-display-id-page_1').length > 0){

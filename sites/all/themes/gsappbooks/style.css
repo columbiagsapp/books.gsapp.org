@@ -458,6 +458,10 @@ div.view div.views-admin-links li a {
   color: #999;
 }
 
+.view-series .views-row{
+  width:265px;
+}
+
 /**
  * 10.FOOTER
  */
@@ -559,18 +563,28 @@ div.view div.views-admin-links li a {
 /* CUSTOM GSAPP BOOKS */
 
 /* BOOK PAGE */
-.book .images img{
-  margin:0 20px 20px 0;
+.book .images{
+  width:855px;
 }
 
-.book .info-container {
+.book .images img{
+  margin:0 20px 20px 0;
+  float: left;
+}
+
+.book .info-container,
+.description {
   width:417px;
   text-align: left;
 }
 
-.book .authors,
-.book .editors,
-.book .info{
+.description{
+  margin:0 auto 30px;
+}
+
+.book .authors-editors-container,
+.book .info,
+.book .title-container{
   margin-bottom:17px;
 }
 
@@ -610,3 +624,35 @@ div.view div.views-admin-links li a {
 .view-display-id-page_5 .view-header{
   text-align: left;
 }
+
+#lightbox #imageDataContainer{
+  bottom: 200px;
+  position: relative;
+  background: transparent !important;
+}
+
+#imageDataContainer #imageData #hoverNav #prevLink{
+  border:none !important;
+  width:28px;
+  height:14px;
+  bottom:200px;
+  background:transparent url('http://www.columbia.edu/cu/arch/books/assets/prev.png') 0 0 no-repeat;
+}
+
+#imageDataContainer #imageData #hoverNav #nextLink{
+  border:none !important;
+  width:30px;
+  height:14px;
+  bottom:200px;
+  background:transparent url('http://www.columbia.edu/cu/arch/books/assets/next.png') 0 0 no-repeat;
+}
+
+#outerImageContainer #bottomNav #bottomNavClose{
+  border:none !important;
+  top:12px;
+  right:12px;
+  width:48px;
+  height:19px;
+  background:transparent url('http://www.columbia.edu/cu/arch/books/assets/close.png') 0 0 no-repeat;
+}
+
