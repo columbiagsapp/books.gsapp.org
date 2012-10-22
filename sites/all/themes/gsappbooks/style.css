@@ -82,6 +82,12 @@ h2{
   text-align: center;
 }
 
+.view-index h3{
+  height:70px;
+  width:70px;
+  padding-top:30px;
+  float:left;
+}
 
 p {
   margin: 0 0 1.5em 0;
@@ -128,8 +134,8 @@ th { padding-right: 1em; }
 #main {
   margin: 0 auto;
   text-align: center;
-  width:855px;
-  padding:185px 0 0 20px;
+  width:880px; /*855px;*/
+  padding:185px 0 0 0;/*185px 0 0 20px;*/
 }
 
 
@@ -221,6 +227,13 @@ th { padding-right: 1em; }
 #edit-submit-2, #edit-submit-3,
 #search-container #search #edit-submit-1 {
   display: none;
+}
+
+#logo-nav{
+  width: 626px;
+  display: block;
+  height: 157px;
+  float: left;
 }
 
 #logo{
@@ -640,6 +653,7 @@ div.view div.views-admin-links li a {
 .view-display-id-page_1 .views-row{
   float:left;
   position:relative;
+  margin-right:20px;
 }
 
 .view-display-id-page_1 .index-item a img{
@@ -655,8 +669,8 @@ div.view div.views-admin-links li a {
 .view-display-id-page_1 .index-item .title-hover{
   display: none;
   position: absolute;
-  top:0;
-  left:0;
+  top:20px;
+  left:7px;
   text-align: left;
   z-index:1;
 }

@@ -113,6 +113,9 @@ $(document).ready(function () {
 	//check if Index by Date is the current page, then init if so
 	if($('.view-display-id-page_1').length > 0){
 
+		/*
+			Initialize the index to append the hidden title+subtitle with the right dimensions
+		*/
 		var initIndexByDate = function(){
 			var width, height;
 			$('.view-display-id-page_1 .views-row .index-item').each(function(){
@@ -120,7 +123,10 @@ $(document).ready(function () {
 				$('.title-hover', this).appendTo($thisA);
 				width = $('a img', this).width();
 				height = $('a img', this).height();
-				$(this).width(width).height(height);
+				$(this).width(width).height(height);//give the containing div the img dims
+				//give the hidden title+subtitle smaller dims for margins
+				width = width - 12;//margin-left + margin-right of 5px
+				height = height - 20;//margin-top
 				$('.title-hover', this).width(width).height(height);
 			});
 		}
