@@ -83,8 +83,10 @@ h2{
 
 .view-index h3{
   height:95px;/*125-30 for top padding*/
-  width:70px;
+  width:40px;
   padding-top:30px;
+  padding-right:20px;
+  padding-bottom: 20px;
   float:left;
 }
 
@@ -812,13 +814,15 @@ div.view div.views-admin-links li a {
 }
 
 #main .content #event-output .embedded-event-date-box {
-  width: 55px;
-  height: 55px;
+  width: 45px;
+  height: 45px;
   float: left;
   border: 3px solid black;
   margin-right: 15px;
+  margin-bottom: 10px;
   text-align: center;
-  font-size: 18px;
+  font-size: 14px;
+  display: none;
 }
 
 #main .upcoming-events-output .embedded-event-date-box {
