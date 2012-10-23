@@ -5,6 +5,7 @@ engine = phptemplate
 stylesheets[all][] = style.css
 scripts[] = gsappbooks.js
 scripts[] = fetcher.js
+scripts[] = jcarousellite_1.0.1.min.js
 
 regions[left] = Left sidebar
 regions[right] = Right sidebar

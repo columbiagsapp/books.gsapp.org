@@ -110,6 +110,19 @@ $(document).ready(function () {
 	}
 
 
+
+	/* JCarousel lite setup
+	*/
+
+	$(function() {
+	    $(".carousel").jCarouselLite({
+	    	visible: 1,
+	        btnNext: ".carousel-next",
+	        btnPrev: ".carousel-prev"
+	    });
+	});
+
+
 	var hoverOnMisreading = function(){
 		$(this).text('reading');
 	}
