@@ -51,10 +51,12 @@
        <div id="sortbox">
         <div class="sortbox-title">
           Sort index by</div>
-        <ul id="highlight">
-        </ul>
-        <ul id="dropdown">
-        </ul>
+          <div id="sortbox-drops">
+            <ul id="highlight">
+            </ul>
+            <ul id="dropdown">
+            </ul>
+          </div>
       </div>
 
       </div> <!-- /#header-inside -->

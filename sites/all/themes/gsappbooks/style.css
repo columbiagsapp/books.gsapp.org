@@ -1004,7 +1004,7 @@ div.view div.views-admin-links li a {
 #press-list {
   text-align: left;
   width: 417px;
-  margin: auto;
+  margin: 0 auto;
   word-break: break-all;
 }
 

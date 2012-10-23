@@ -5,7 +5,7 @@ $(document).ready(function () {
 
 	var path = window.location.pathname;
 
-	var liDate = '<li><a href="/index/date" target="_self">Date</a></li>';
+	var liYear = '<li><a href="/index/year" target="_self">Year</a></li>';
 	var liTitle = '<li><a href="/index/title" target="_self">Title</a></li>';
 	var liAuthor = '<li><a href="/index/author" target="_self">Author</a></li>';
 	var liAllJournals = '<li><a href="/journals" target="_self">All</a></li>';
@@ -16,72 +16,96 @@ $(document).ready(function () {
 	var liAllSeries = '<li><a href="/series" target="_self">All</a></li>';
 	var liAbstract = '<li><a href="/series/abstract" target="_self">Abstract</a></li>';
 	var liLivingArchive = '<li><a href="/series/living-archive" target="_self">Living Archive</a></li>';
-	var liCBAME = '<li><a href="/series/cba-me" target="_self">Materials Conference</a></li>';
+	var liCBAEM = '<li><a href="/series/cba-em" target="_self">Materials Conference</a></li>';
 	var liSourceBooks = '<li><a href="/series/source-books" target="_self">Source Books</a></li>';
+	var liNewUrbanisms = '<li><a href="/series/new-urbanisms" target="_self">New Urbanisms</a></li>';
 
 
 
 
 	switch(path){
 		case '/':
-			$('#highlight').html(liDate);
-			$('#dropdown').html(liTitle+liAuthor);
+			$('.sortbox-title').text('Sort index by');
+			$('#highlight').html(liYear);
+			$('#dropdown').html(liTitle+liAuthor).show();
 			break;
-		case '/index/date':
-			$('#highlight').html(liDate);
-			$('#dropdown').html(liTitle+liAuthor);
+		case '/index/year':
+			$('.sortbox-title').text('Sort index by');
+			$('#highlight').html(liYear);
+			$('#dropdown').html(liTitle+liAuthor).show();
 			break;
 		case '/index/title':
+			$('#logo-nav #navigation .menu li a[href="/index/year"]').addClass('active');
+			$('.sortbox-title').text('Sort index by');
 			$('#highlight').html(liTitle);
-			$('#dropdown').html(liDate+liAuthor);
+			$('#dropdown').html(liYear+liAuthor).show();
 			break;
 		case '/index/author':
+			$('#logo-nav #navigation .menu li a[href="/index/year"]').addClass('active');
+			$('.sortbox-title').text('Sort index by');
 			$('#highlight').html(liAuthor);
-			$('#dropdown').html(liDate+liTitle);
+			$('#dropdown').html(liYear+liTitle).show();
 			break;
 		case '/journals':
+			$('.sortbox-title').text('View journals by');
 			$('#highlight').html(liAllJournals);
-			$('#dropdown').html(liFutureAnterior+liPotlatch+liUrbanMagazine+liVolume);
+			$('#dropdown').html(liFutureAnterior+liPotlatch+liUrbanMagazine+liVolume).show();
 			break;
 		case '/journals/future-anterior':
+			$('.sortbox-title').text('View journals by');
 			$('#highlight').html(liFutureAnterior);
-			$('#dropdown').html(liAllJournals+liPotlatch+liUrbanMagazine+liVolume);
+			$('#dropdown').html(liAllJournals+liPotlatch+liUrbanMagazine+liVolume).show();
 			break;
 		case '/journals/potlatch':
+			$('.sortbox-title').text('View journals by');
 			$('#highlight').html(liPotlatch);
-			$('#dropdown').html(liAllJournals+liFutureAnterior+liUrbanMagazine+liVolume);
+			$('#dropdown').html(liAllJournals+liFutureAnterior+liUrbanMagazine+liVolume).show();
 			break;
 		case '/journals/urban-magazine':
+			$('.sortbox-title').text('View journals by');
 			$('#highlight').html(liUrbanMagazine);
-			$('#dropdown').html(liAllJournals+liFutureAnterior+liPotlatch+liVolume);
+			$('#dropdown').html(liAllJournals+liFutureAnterior+liPotlatch+liVolume).show();
 			break;
 		case '/journals/volume':
+			$('.sortbox-title').text('View journals by');
 			$('#highlight').html(liVolume);
-			$('#dropdown').html(liAllJournals+liFutureAnterior+liPotlatch+liUrbanMagazine);
+			$('#dropdown').html(liAllJournals+liFutureAnterior+liPotlatch+liUrbanMagazine).show();
 			break;
 		case '/series':
+			$('.sortbox-title').text('View series by');
 			$('#highlight').html(liAllSeries);
-			$('#dropdown').html(liAbstract+liLivingArchive+liCBAME+liSourceBooks);
+			$('#dropdown').html(liAbstract+liLivingArchive+liCBAEM+liSourceBooks+liNewUrbanisms).show();
 			break;
 		case '/series/abstract':
+			$('.sortbox-title').text('View series by');
 			$('#highlight').html(liAbstract);
-			$('#dropdown').html(liAllSeries+liLivingArchive+liCBAME+liSourceBooks);
+			$('#dropdown').html(liAllSeries+liLivingArchive+liCBAEM+liSourceBooks+liNewUrbanisms).show();
 			break;
 		case '/series/living-archive':
+			$('.sortbox-title').text('View series by');
 			$('#highlight').html(liLivingArchive);
-			$('#dropdown').html(liAllSeries+liAbstract+liCBAME+liSourceBooks);
+			$('#dropdown').html(liAllSeries+liAbstract+liCBAEM+liSourceBooks+liNewUrbanisms).show();
 			break;
-		case '/series/cba-me':
-			$('#highlight').html(liCBAME);
-			$('#dropdown').html(liAllSeries+liAbstract+liLivingArchive+liSourceBooks);
+		case '/series/cba-em':
+			$('.sortbox-title').text('View series by');
+			$('#highlight').html(liCBAEM);
+			$('#dropdown').html(liAllSeries+liAbstract+liLivingArchive+liSourceBooks+liNewUrbanisms).show();
 			break;
 		case '/series/source-books':
+			$('.sortbox-title').text('View series by');
 			$('#highlight').html(liSourceBooks);
-			$('#dropdown').html(liAllSeries+liAbstract+liLivingArchive+liCBAME);
+			$('#dropdown').html(liAllSeries+liAbstract+liLivingArchive+liCBAEM+liNewUrbanisms).show();
+			break;
+		case '/series/new-urbanisms':
+			$('.sortbox-title').text('View series by');
+			$('#highlight').html(liNewUrbanisms);
+			$('#dropdown').html(liAllSeries+liAbstract+liLivingArchive+liCBAEM+liSourceBooks).show();
 			break;
 
-
 		default:
+			$('.sortbox-title').text('Sort index by');
+			$('#sortbox-drops').hover(function(){ $('#dropdown').show(); }, function(){ $('#dropdown').hide(); });
+			$('#dropdown').html(liYear+liTitle+liAuthor).hide();
 			break;
 	}
 
