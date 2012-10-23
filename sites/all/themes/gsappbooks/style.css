@@ -794,7 +794,6 @@ div.view div.views-admin-links li a {
 #main .content #event-output .embedded-event {
   width: 500px;
   margin-bottom: 50px;
-  font: 16px/20px "DIN Next W02 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: left;
 }
 
@@ -840,13 +839,10 @@ div.view div.views-admin-links li a {
   overflow:hidden;
 }
 #main .upcoming-events-output .embedded-event-title{
-  font-size:12px;
-  line-height: 14px;
 }
 
 #main .upcoming-events-output .embedded-event-body-area{
   padding-left:50px;
-  font:12px/14px "DIN Next W01 Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #main .content #event-output .embedded-event-date-box.filled,
