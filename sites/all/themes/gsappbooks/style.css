@@ -108,7 +108,7 @@ h1.book-title{
 }
 
 h1.book-title span{
-  border-bottom:2px solid;
+  border-bottom: none;
 }
 
 /* apply common styling after reset.css */
@@ -271,6 +271,7 @@ div#edit-search-block-form-1-wrapper label {
   font-size: 14px;
   line-height: 16px;
   width:477px;
+  padding-top: 12px;
 }
 
 #navigation ul {
@@ -662,6 +663,7 @@ div.view div.views-admin-links li a {
   float:left;
   position:relative;
   margin-right:20px;
+  margin-bottom: 20px;
 }
 
 .view-display-id-page_1 .index-item a img{
@@ -693,7 +695,7 @@ div.view div.views-admin-links li a {
 
 .view-journals .view-header,
 .view-series .view-header{
-  width:400px;
+  width:417px;
   text-align: center;
   margin:0 auto;
   text-align: left;
@@ -786,13 +788,13 @@ div.view div.views-admin-links li a {
 
 /* Events JSON feed */
 #main .content #event-output {
-  width:500px;
+  width:417px;
   text-align:center;
   margin:0 auto;
 }
 
 #main .content #event-output .embedded-event {
-  width: 500px;
+  width: 417px;
   margin-bottom: 50px;
   text-align: left;
 }
@@ -803,7 +805,7 @@ div.view div.views-admin-links li a {
 
 
 #main .content #event-output .embedded-event-top-area {
-  width: 500px;
+  width: 417px;
   min-height: 55px;
   display: inline-table;
   margin-bottom: 20px;
@@ -995,6 +997,11 @@ div.view div.views-admin-links li a {
   background-color:gray;
 }
 
-
+#press-list {
+  text-align: left;
+  width: 417px;
+  margin: auto;
+  word-break: break-all;
+}
 
 
