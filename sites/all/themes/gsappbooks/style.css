@@ -203,7 +203,7 @@ th { padding-right: 1em; }
 #highlight li,
 #dropdown li{
   padding:0 !important;
-  margin:0 0 3px;
+  margin:1px 0 2px;
   width:100%;
   text-align: center;
 }
