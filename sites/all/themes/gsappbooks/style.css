@@ -729,6 +729,7 @@ div.view div.views-admin-links li a {
   width:28px;
   height:14px;
   bottom:200px;
+  text-indent:-9999px;
   background:transparent url('http://www.columbia.edu/cu/arch/books/assets/prev.png') 0 0 no-repeat;
 }
 
@@ -737,7 +738,40 @@ div.view div.views-admin-links li a {
   width:30px;
   height:14px;
   bottom:200px;
+  text-indent:-9999px;
   background:transparent url('http://www.columbia.edu/cu/arch/books/assets/next.png') 0 0 no-repeat;
+}
+
+.carousel{
+  position:relative;
+}
+.carousel-next, .carousel-prev{
+  z-index:10;
+  position:absolute;
+}
+
+.carousel-next{
+  border:none !important;
+  width:30px;
+  height:14px;
+  bottom:153px;
+  right:14px;
+  text-indent:-9999px;
+  background:transparent url('http://www.columbia.edu/cu/arch/books/assets/next.png') 0 0 no-repeat;
+}
+
+.carousel-prev{
+  border:none !important;
+  width:28px;
+  height:14px;
+  bottom:153px;
+  left:14px;
+  text-indent:-9999px;
+  background:transparent url('http://www.columbia.edu/cu/arch/books/assets/prev.png') 0 0 no-repeat;
+}
+
+.carousel-next:hover, .carousel-prev:hover{
+  cursor:pointer;
 }
 
 #outerImageContainer #bottomNav #bottomNavClose{
@@ -1015,3 +1049,42 @@ div.view div.views-admin-links li a {
   text-align:center;
   margin:0 auto;
 }
+
+#info-main{
+  width:417px;
+  margin-left:231px;
+  float: left;
+}
+
+#info-side{
+  width:152px;
+  float:right;
+}
+
+#info-side div{
+  text-align: left;
+}
+
+#poster-slider,
+#ordering-title,
+#assistants,
+#distributed-title{
+  margin-bottom:14px;
+}
+
+#director-portrait{
+  margin-bottom:5px;
+}
+
+#main-text{
+  text-align: left;
+  margin-bottom:34px;
+}
+
+#main-image,
+#director-name,
+#ordering,
+#photographers{
+  margin-bottom: 34px;
+}
+
