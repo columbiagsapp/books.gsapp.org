@@ -61,7 +61,6 @@ h1 {
   font-size:14px;
   line-height: 20px;
   margin-bottom:30px;
-  margin-left:-20px;
 }
 
 .book .title{
@@ -83,7 +82,7 @@ h2{
 }
 
 .view-index h3{
-  height:70px;
+  height:95px;/*125-30 for top padding*/
   width:70px;
   padding-top:30px;
   float:left;
@@ -101,6 +100,15 @@ a:focus { outline: none; }
 
 a.imagecache{
   border:none !important;
+}
+
+h1.book-title{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1.book-title span{
+  border-bottom:2px solid;
 }
 
 /* apply common styling after reset.css */
@@ -677,14 +685,33 @@ div.view div.views-admin-links li a {
 
 
 /* JOURNALS INDEX VIEW */
-.view-display-id-page_5 {
+.view-journals,
+.view-series{
+  clear:both;
+  padding-bottom:30px;
+}
+
+.view-journals .view-header,
+.view-series .view-header{
   width:400px;
+  text-align: center;
+  margin:0 auto;
+  text-align: left;
+}
+
+.view-journals .view-content,
+.view-series .view-content,
+#person-books{
   text-align: center;
   margin:0 auto;
 }
 
-.view-display-id-page_5 .view-header{
-  text-align: left;
+.view-journals .views-row,
+.view-series .views-row,
+#person-books .views-row{
+  float:left;
+  margin-right:20px;
+  margin-bottom:20px;
 }
 
 #lightbox #imageDataContainer{
@@ -717,4 +744,261 @@ div.view div.views-admin-links li a {
   height:19px;
   background:transparent url('http://www.columbia.edu/cu/arch/books/assets/close.png') 0 0 no-repeat;
 }
+
+#loadingLink{
+  border:none !important;
+}
+
+
+/* Column Index view for by Title and by Author */
+.column{
+  width:160px;
+  float:left;
+  text-align:left;
+}
+
+#column-0, #column-1, #column-2, #column-3{
+  margin-right:20px;
+}
+#column-4{
+  margin-right:0;
+}
+
+.column a{
+  border:none !important;
+}
+
+.column a:hover{
+  border-bottom:2px solid !important;
+}
+
+.column .views-row{
+  margin-bottom:12px;
+}
+
+.column .letter-header{
+  width:100%;
+  border-bottom: 1px solid;
+  margin-bottom:10px;
+  padding-bottom:5px;
+}
+
+
+/* Events JSON feed */
+#main .content #event-output {
+  width:500px;
+  text-align:center;
+  margin:0 auto;
+}
+
+#main .content #event-output .embedded-event {
+  width: 500px;
+  margin-bottom: 50px;
+  font: 16px/20px "DIN Next W02 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: left;
+}
+
+#main .content #event-output .embedded-event a.region, #main .content #event-output .embedded-event a.region:hover {
+  border: none;
+}
+
+
+#main .content #event-output .embedded-event-top-area {
+  width: 500px;
+  min-height: 55px;
+  display: inline-table;
+  margin-bottom: 20px;
+}
+
+#main .content #event-output .embedded-event-date-box {
+  width: 55px;
+  height: 55px;
+  float: left;
+  border: 3px solid black;
+  margin-right: 15px;
+  text-align: center;
+  font-size: 18px;
+}
+
+#main .upcoming-events-output .embedded-event-date-box {
+  width: 26px;
+  height: 24px;
+  float: left;
+  border: 2px solid black;
+  margin-right: 20px;
+  text-align: center;
+  font-size: 10px;
+  text-transform: uppercase;
+  line-height: 11px;
+  padding-top: 2px;
+  color:black;
+}
+
+#main .upcoming-events-output .embedded-event{
+  height: 77px;
+  display:block;
+  overflow:hidden;
+}
+#main .upcoming-events-output .embedded-event-title{
+  font-size:12px;
+  line-height: 14px;
+}
+
+#main .upcoming-events-output .embedded-event-body-area{
+  padding-left:50px;
+  font:12px/14px "DIN Next W01 Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#main .content #event-output .embedded-event-date-box.filled,
+#main .embedded-event-date-box.filled {
+  background-color:#999;
+}
+
+
+#main .content #event-output .embedded-event-date-box.north-america.filled,
+#main .embedded-event-date-box.north-america.filled {
+  background-color:#00D6FF;
+}
+
+#main .content #event-output .embedded-event-date-box.latin-america.filled,
+#main .embedded-event-date-box.latin-america.filled {
+  background-color:#00E652;
+}
+
+#main .content #event-output .embedded-event-date-box.south-asia.filled,
+#main .embedded-event-date-box.south-asia.filled {
+  background-color:#FF9E00;
+}
+
+#main .content #event-output .embedded-event-date-box.middle-east.filled,
+#main .embedded-event-date-box.middle-east.filled {
+  background-color:#FF00A6;
+}
+
+#main .content #event-output .embedded-event-date-box.africa.filled,
+#main .embedded-event-date-box.africa.filled {
+  background-color:#008AFF;
+}
+
+#main .content #event-output .embedded-event-date-box.europe.filled,
+#main .embedded-event-date-box.europe.filled {
+  background-color:#AD20FF;
+}
+
+#main .content #event-output .embedded-event-date-box.asia.filled,
+#main .embedded-event-date-box.asia.filled {
+  background-color:#FF555A;
+}
+
+#main .content #event-output .embedded-event-date-box.other.filled,
+#main .embedded-event-date-box.other.filled {
+  background-color:gray;
+}
+
+#main .content #event-output .embedded-event-date-box div {
+  position: relative;
+  top: 7px;
+  line-height: 1.2em;
+  color: #000;
+}
+
+#main .content #event-output .embedded-event-title {
+  font-size: 200%;
+  line-height: 1.2em;
+}
+
+#main .content #event-output .embedded-event-body-area {
+
+}
+#main .content #event-output .embedded-event-description {
+  margin-top: 25px;
+}
+#main .content #event-output .embedded-event-description-more {
+  margin-top: 25px;
+  margin-bottom:40px;
+}
+
+#main .north-america, #main .north-america a {
+  color:#00D6FF;
+}
+
+#main .latin-america, #main .latin-america a {
+  color:#00E652;
+}
+
+#main .none {
+}
+
+#main .south-asia, #main .south-asia a {
+  color:#FF9E00;
+}
+
+#main .middle-east, #main .middle-east a {
+  color:#FF00A6;
+}
+
+#main .africa, #main .africa a { 
+  color:#008AFF;
+}
+
+#main .europe, #main .europe a {
+  color:#AD20FF;
+}
+
+#main .asia, #main .asia a {
+  color:#FF555A;
+}
+
+#main .other, #main .other a{
+  color:black;
+}
+
+#main .content #event-output .embedded-event-date-box.filled,
+#main .embedded-event-date-box.filled {
+  background-color:#999;
+}
+
+
+#main .content #event-output .embedded-event-date-box.north-america.filled,
+#main .embedded-event-date-box.north-america.filled {
+  background-color:#00D6FF;
+}
+
+#main .content #event-output .embedded-event-date-box.latin-america.filled,
+#main .embedded-event-date-box.latin-america.filled {
+  background-color:#00E652;
+}
+
+#main .content #event-output .embedded-event-date-box.south-asia.filled,
+#main .embedded-event-date-box.south-asia.filled {
+  background-color:#FF9E00;
+}
+
+#main .content #event-output .embedded-event-date-box.middle-east.filled,
+#main .embedded-event-date-box.middle-east.filled {
+  background-color:#FF00A6;
+}
+
+#main .content #event-output .embedded-event-date-box.africa.filled,
+#main .embedded-event-date-box.africa.filled {
+  background-color:#008AFF;
+}
+
+#main .content #event-output .embedded-event-date-box.europe.filled,
+#main .embedded-event-date-box.europe.filled {
+  background-color:#AD20FF;
+}
+
+#main .content #event-output .embedded-event-date-box.asia.filled,
+#main .embedded-event-date-box.asia.filled {
+  background-color:#FF555A;
+}
+
+#main .content #event-output .embedded-event-date-box.other.filled,
+#main .embedded-event-date-box.other.filled {
+  background-color:gray;
+}
+
+
+
 

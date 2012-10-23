@@ -107,7 +107,6 @@ $(document).ready(function () {
 	var hoverOffImage = function(){
 		$(this).css('opacity',1);
 	}
-
 	$('#main a img').hover(hoverOnImage, hoverOffImage);
 
 	//check if Index by Date is the current page, then init if so
@@ -139,6 +138,43 @@ $(document).ready(function () {
 
 		initIndexByDate();
 		$('.view-display-id-page_1 .index-item').bind('mouseenter', indexByDateHover).bind('mouseleave', indexByDateHover);
+	}
+
+
+	if($('.view-journals, .view-series').length > 0){
+		$('.view-content').each(function(){
+			var num = $('.views-row', this).length;
+			switch(num){
+				case 1:
+					$('.views-row:nth-child(1)', this).css('marginRight', 0);
+					$(this).width('265px');
+					break;
+				case 2:
+					$('.views-row:nth-child(2)', this).css('marginRight', 0);
+					$(this).width('550px');
+					break;
+				default:
+					$('.views-row:nth-child(3n)', this).css('marginRight', 0);
+					break;
+			}
+		});
+	}
+
+	if($('#person-books').length > 0){
+			var num = $('.views-row').length;
+			switch(num){
+				case 1:
+					$('.views-row:nth-child(1)', this).css('marginRight', 0);
+					$('#person-books').width('265px');
+					break;
+				case 2:
+					$('.views-row:nth-child(2)', this).css('marginRight', 0);
+					$('#person-books').width('550px');
+					break;
+				default:
+					$('.views-row:nth-child(3n)', this).css('marginRight', 0);
+					break;
+			}
 	}
 
 	
