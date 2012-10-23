@@ -148,6 +148,10 @@ th { padding-right: 1em; }
   padding: 210px 0 0 0;/*185px 0 0 20px;*/
 }
 
+.node-type-info #main{
+  width:924px;
+}
+
 
 /**
  * 5.HEADER
@@ -1052,12 +1056,12 @@ div.view div.views-admin-links li a {
 
 #info-main{
   width:417px;
-  margin-left:231px;
+  margin-left:253px;
   float: left;
 }
 
 #info-side{
-  width:152px;
+  width:149px;
   float:right;
 }
 
