@@ -1,9 +1,3 @@
-<h1>
-  <?php
-    print $node->title;
-  ?>
-</h1>
-
 <div id="info-main">
   <?php
     if( !empty($node->field_main_image[0]['view']) ){
