@@ -641,6 +641,8 @@ div.view div.views-admin-links li a {
 /* BOOK PAGE */
 .book .images{
   width:855px;
+  float:left;
+  clear:both;
 }
 
 .book .images img{
@@ -652,6 +654,11 @@ div.view div.views-admin-links li a {
 .description {
   width:417px;
   text-align: left;
+}
+
+.book .info-container{
+  float: left;
+  clear: both;
 }
 
 .description{
