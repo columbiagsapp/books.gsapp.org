@@ -727,6 +727,7 @@ div.view div.views-admin-links li a {
   float:left;
   margin-right:20px;
   margin-bottom:20px;
+  max-width: 265px;
 }
 
 #lightbox #imageDataContainer{
