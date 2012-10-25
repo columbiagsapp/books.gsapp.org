@@ -114,8 +114,46 @@ body {
       border: 2px solid blue;
     }
     
-    #navigation{
-    }
+    /**
+ * 6.NAVIGATION
+ */
+
+#navigation {
+  clear: both;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 16px;
+  width:478px;
+  padding-top: 12px;
+}
+
+#navigation ul {
+  list-style: none !important;
+  margin: 0;
+  padding: 0;
+}
+
+#navigation ul li,
+#navigation ul li.leaf {
+  float: left;
+  margin: 0 8px 0 8px;
+  padding: 0;
+  list-style: none !important;
+}
+
+#navigation ul li a {
+  display: block;
+  border: none;
+  padding: 0;
+}
+
+#navigation ul li a:hover,
+#navigation ul li a:active,
+#navigation ul li a.active{
+  border-bottom: 2px solid !important;
+}
     
     #logo{
       float:left;
@@ -268,4 +306,20 @@ a:hover.tag, a:hover.tags {
   margin-top:20px;
   text-align: left;
   margin-left:50px;
+}
+
+
+/* permalink page */
+.permalink-page #main,
+.permalink-page .post, 
+.permalink-page .post img {
+  width:500px;
+}
+
+.permalink-page .post .text img {
+  margin:0;
+}
+
+.permalink-page #filters{
+  display: none;
 }

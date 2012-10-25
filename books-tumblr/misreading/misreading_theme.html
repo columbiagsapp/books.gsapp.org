@@ -64,8 +64,8 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript" src="http://www.columbia.edu/cu/arch/books/misreading/jquery.masonry.min.js"></script>
     <script type="text/javascript" src="http://www.columbia.edu/cu/arch/books/misreading/arrow_top.js"></script>
-	<script type="text/javascript" src="http://www.columbia.edu/cu/arch/books/misreading/truncator.js"></script>
-	<script type="text/javascript" src="http://www.columbia.edu/cu/arch/books/misreading/jquery.infinitescroll.min.js"></script>
+    <script type="text/javascript" src="http://www.columbia.edu/cu/arch/books/misreading/truncator.js"></script>
+    <script type="text/javascript" src="http://www.columbia.edu/cu/arch/books/misreading/jquery.infinitescroll.min.js"></script>
 	<script type="text/javascript" src="http://www.columbia.edu/cu/arch/books/misreading/misreading.js"></script>
 
 	<!-- fonts.com Fute font -->
@@ -80,14 +80,23 @@
   <div id="header">
   	<div id="header-inside">
 	  	<div id="search-container">
-	  		Search
+	  		Search Misreading
 		  	<form action="/search" method="get">
 			    <input type="text" name="q" value="{SearchQuery}"/>
 			    <input class="hidden" type="submit" value="Search"/>
 			</form>
 		</div><!-- /#search-container -->
-		<a id="logo" href="/"><img src="http://www.columbia.edu/cu/arch/books/assets/Books-logo.png"></a>
-		<div id="navigation"></div>
+		<a id="logo" href="http://books.gsapp.org"><img src="http://www.columbia.edu/cu/arch/books/assets/Books-logo.png"></a>
+		<div id="navigation">
+			<ul class="menu"><li class="leaf first"><a href="/info" title="Info">Info</a></li>
+				<li><a href="http://books.gsapp.org/index/year">Index</a></li>
+				<li><a href="http://books.gsapp.org/series">Series</a></li>
+				<li><a href="http://books.gsapp.org/journals">Journals</a></li>
+				<li><a href="/" class="active">Misreading</a></li>
+				<li><a href="http://books.gsapp.org/events" title="">Events</a></li>
+				<li><a href="http://books.gsapp.org/press" title="">Press</a></li>
+			</ul>
+		</div>
 	</div>
 </div> 
 
