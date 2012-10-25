@@ -144,7 +144,7 @@ th { padding-right: 1em; }
 #main {
   margin: 0 auto;
   text-align: center;
-  width:880px; /*855px;*/
+  width:835px; /*855px;*/
   padding: 210px 0 0 0;/*185px 0 0 20px;*/
 }
 
@@ -276,7 +276,7 @@ div#edit-search-block-form-1-wrapper label {
   text-align: center;
   font-size: 14px;
   line-height: 16px;
-  width:477px;
+  width:478px;
   padding-top: 12px;
 }
 

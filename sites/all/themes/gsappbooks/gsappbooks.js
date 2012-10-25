@@ -28,11 +28,13 @@ $(document).ready(function () {
 			$('.sortbox-title').text('Sort index by');
 			$('#highlight').html(liYear);
 			$('#dropdown').html(liTitle+liAuthor).show();
+			$('.view-index h3:contains("Forthcoming")').html('Forth-<br>coming');
 			break;
 		case '/index/year':
 			$('.sortbox-title').text('Sort index by');
 			$('#highlight').html(liYear);
 			$('#dropdown').html(liTitle+liAuthor).show();
+			$('.view-index h3:contains("Forthcoming")').html('Forth-<br>coming');
 			break;
 		case '/index/title':
 			$('#logo-nav #navigation .menu li a[href="/index/year"]').addClass('active');
