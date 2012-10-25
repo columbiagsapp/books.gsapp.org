@@ -20,29 +20,44 @@ $(document).ready(function () {
 	var liSourceBooks = '<li><a href="/series/source-books" target="_self">Source Books</a></li>';
 	var liNewUrbanisms = '<li><a href="/series/new-urbanisms" target="_self">New Urbanisms</a></li>';
 
+	var indexYearResize = function(){
+		console.log('resize()');
+		if( (window.innerWidth*0.8) <= 924){
+			$('#main').width('924px').css('margin','0 auto');
+		}else{
+			$('#main').width('80%').css('margin','');
+		}
+	}
 
-
+	$('body').removeClass('index-page');//reset on each page load
 
 	switch(path){
 		case '/':
+			$('body').addClass('index-year-page');
+			$(window).resize(indexYearResize);
 			$('.sortbox-title').text('Sort index by');
 			$('#highlight').html(liYear);
 			$('#dropdown').html(liTitle+liAuthor).show();
 			$('.view-index h3:contains("Forthcoming")').html('Forth-<br>coming');
+
 			break;
 		case '/index/year':
+			$('body').addClass('index-year-page');
+			$(window).resize(indexYearResize);
 			$('.sortbox-title').text('Sort index by');
 			$('#highlight').html(liYear);
 			$('#dropdown').html(liTitle+liAuthor).show();
 			$('.view-index h3:contains("Forthcoming")').html('Forth-<br>coming');
 			break;
 		case '/index/title':
+			$('body').addClass('index-title-page');
 			$('#logo-nav #navigation .menu li a[href="/index/year"]').addClass('active');
 			$('.sortbox-title').text('Sort index by');
 			$('#highlight').html(liTitle);
 			$('#dropdown').html(liYear+liAuthor).show();
 			break;
 		case '/index/author':
+			$('body').addClass('index-author-page');
 			$('#logo-nav #navigation .menu li a[href="/index/year"]').addClass('active');
 			$('.sortbox-title').text('Sort index by');
 			$('#highlight').html(liAuthor);
@@ -216,6 +231,24 @@ $(document).ready(function () {
 			}
 	}
 
+	var headerBackgrounds = new Array("bomb-header", "circles-header", "diamond-header", "heart-header", "lemon-header", "rhino-header");
+
 	
+	/* Randomizer for Header background image */
+	var randomizeHeaderBG = function(){
+		var bg = 'url(/sites/default/files/header-images/'+headerBackgrounds[ Math.floor(Math.random()*headerBackgrounds.length) ]+'.png)';
+		$('#header-inside').css('background-image',bg);
+	}
+
+	randomizeHeaderBG();
+
+
+	$('#main .book .images').each(function(){
+		if( $('img', this).length <= 0){
+			$(this).closest('.book').addClass('forthcoming');
+		}
+	});
+
+
 
 });

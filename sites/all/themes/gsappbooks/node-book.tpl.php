@@ -1,5 +1,10 @@
-
-<article id="node-<?php print $node->nid; ?>" class="book node<?php if (!$status) { print ' node-unpublished'; } ?> clearfix">
+<?php
+  $forthcoming = false;
+  if($node->field_year[0]['view'] == 'Forthcoming'){
+    $forthcoming = true;
+  }
+?>
+<article id="node-<?php print $node->nid; ?>" class="book node<?php if (!$status) { print ' node-unpublished'; } if($forthcoming){ print ' forthcoming'; } ?> clearfix">
 
 
   <h1>

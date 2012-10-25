@@ -148,6 +148,18 @@ th { padding-right: 1em; }
   padding: 210px 0 0 0;/*185px 0 0 20px;*/
 }
 
+.index-year-page #main{
+  width: 80%;
+  padding: 210px 0;
+  margin:0 10%;
+  min-width:880px;
+}
+
+.index-title-page #main,
+.index-author-page #main{
+  width:920px;
+}
+
 .node-type-info #main{
   width:924px;
 }
@@ -172,7 +184,7 @@ th { padding-right: 1em; }
   text-align: center;
   margin:0 auto;
   z-index: 9999;
-  background: transparent url("http://www.columbia.edu/cu/arch/books/assets/rhinoBG.png") no-repeat 0 0;
+  background: transparent;
 }
 
 /* sort by block */
@@ -239,7 +251,7 @@ th { padding-right: 1em; }
 }
 
 #edit-submit-2, #edit-submit-3,
-#search-container #search #edit-submit-1 {
+#search-container #search #edit-submit-1, #search #edit-submit-4 {
   display: none;
 }
 
@@ -534,10 +546,6 @@ div.view div.views-admin-links li a {
   color: #999;
 }
 
-.view-series .views-row{
-  width:265px;
-}
-
 /**
  * 10.FOOTER
  */
@@ -639,6 +647,12 @@ div.view div.views-admin-links li a {
 /* CUSTOM GSAPP BOOKS */
 
 /* BOOK PAGE */
+.forthcoming.book{
+  text-align: center;
+  margin:0 auto;
+  width:417px;
+}
+
 .book .images{
   width:855px;
   float:left;
@@ -704,6 +718,9 @@ div.view div.views-admin-links li a {
 .view-series{
   clear:both;
   padding-bottom:30px;
+  float:left;
+  clear:both;
+  width:100%;
 }
 
 .view-journals .view-header,
@@ -715,7 +732,11 @@ div.view div.views-admin-links li a {
 }
 
 .view-journals .view-content,
-.view-series .view-content,
+.view-series .view-content{
+  text-align: center;
+  margin:0 auto;
+}
+
 #person-books{
   text-align: center;
   margin:0 auto;
@@ -802,7 +823,7 @@ div.view div.views-admin-links li a {
 
 /* Column Index view for by Title and by Author */
 .column{
-  width:160px;
+  width:168px;
   float:left;
   text-align:left;
 }
@@ -1100,3 +1121,15 @@ div.view div.views-admin-links li a {
   margin-bottom: 34px;
 }
 
+.imagecache-book_photo_265x176{
+  height:176px;
+}
+
+/* Search styling */
+.search-info{
+  display: none;
+}
+
+#search-form{
+  display: none;
+}
