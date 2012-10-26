@@ -139,6 +139,18 @@ $(document).ready(function () {
 	    });
 	});
 
+	//used to create the animated GIF effect on the /info page
+	//control the speed with the auto param, speed must be 0 or a sliding effect is used
+	$(function() {
+	    $(".gif-carousel").jCarouselLite({
+	    	visible: 1,
+	    	auto: 200,
+	    	speed: 0,
+	        btnNext: ".hidden-next",
+	        btnPrev: ".hidden-prev"
+	    });
+	});
+
 
 	var hoverOnMisreading = function(){
 		$(this).text('reading');
@@ -241,14 +253,5 @@ $(document).ready(function () {
 	}
 
 	randomizeHeaderBG();
-
-
-	$('#main .book .images').each(function(){
-		if( $('img', this).length <= 0){
-			$(this).closest('.book').addClass('forthcoming');
-		}
-	});
-
-
 
 });

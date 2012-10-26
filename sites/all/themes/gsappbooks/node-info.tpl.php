@@ -1,11 +1,11 @@
 <div id="info-main">
   <?php
     if( !empty($node->field_main_image[0]['view']) ){
-      echo '<div id="main-image">';
+      echo '<div id="main-image" class="gif-carousel"><ul>';
       for($i=0;$i<count($node->field_main_image);$i++){
-        print $node->field_main_image[$i]['view'];
+        print '<li>'.$node->field_main_image[$i]['view'].'</li>';
       }
-      echo '</div>';
+      echo '</ul></div>';
     }
 
     if( !empty($node->field_main_text[0]['view']) ){

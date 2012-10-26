@@ -175,7 +175,7 @@ th { padding-right: 1em; }
   position: fixed;
   overflow: hidden;
   margin-bottom:100px;
-  z-index: 10000;
+  z-index: 6;
 }
 
 #header-inside{
@@ -183,7 +183,7 @@ th { padding-right: 1em; }
   height:180px;
   text-align: center;
   margin:0 auto;
-  z-index: 9999;
+  z-index: 5;
   background: transparent;
 }
 
@@ -502,7 +502,7 @@ section.block div.edit {
   position: absolute;
   right: 0;
   top: 0;
-  z-index: 40;
+  z-index: 4;
 }
 
 section.block:hover div.edit {
@@ -779,7 +779,7 @@ div.view div.views-admin-links li a {
   position:relative;
 }
 .carousel-next, .carousel-prev{
-  z-index:10;
+  z-index:3;
   position:absolute;
 }
 
