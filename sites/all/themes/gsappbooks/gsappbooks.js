@@ -162,7 +162,7 @@ $(document).ready(function () {
 	$('#navigation .menu li a').each(function(){
 		if($(this).text() == "Misreading"){
 			$(this).html('<span class="mis">Mis</span>reading');
-			$(this).hover(function(){ $('.mis').css('color','white'); }, function(){$('.mis').css('color','black');});
+			$(this).hover(function(){ $('.mis').css('opacity','0'); }, function(){$('.mis').css('opacity','1');});
 		}
 	});
 
