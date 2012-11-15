@@ -675,6 +675,11 @@ div.view div.views-admin-links li a {
   clear: both;
 }
 
+.book .look-inside{
+  float:right;
+  text-align:right;
+}
+
 .description{
   margin:0 auto 30px;
 }

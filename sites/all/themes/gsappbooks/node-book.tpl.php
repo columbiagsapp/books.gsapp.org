@@ -145,18 +145,19 @@
     ?>
 
     <?php
-      if(!empty($node->field_issuu_link)){
-        print '<div class="colophon">'.$node->field_issuu_link[0]['view'].'</div>';
-      }
-    ?>
-
-    <?php
       if(!empty($node->field_download)){
         print '<div class="colophon">'.$node->field_download[0]['view'].'</div>';
       }
     ?>
 
   </div><!-- /.info-container -->
+  <div class="look-inside">
+    <?php
+      if(!empty($node->field_issuu_link)){
+        print '<div class="colophon">'.$node->field_issuu_link[0]['view'].'</div>';
+      }
+    ?>
+  </div>
 
 
 </article> <!-- /.node -->
