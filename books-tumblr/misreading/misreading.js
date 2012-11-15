@@ -66,6 +66,12 @@ $(document).ready(function () {
 		initInfiniteScroll();
 	}
 
+	$('.post .caption a').each(function(){
+		if($(this).children('img').length = 1){
+			$(this).css('border', 'none');
+		}
+	});
+
 	
 
 	$('#misreading-filter').bind('click', function(){
