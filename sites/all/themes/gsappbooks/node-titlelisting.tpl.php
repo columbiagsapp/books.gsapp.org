@@ -20,7 +20,7 @@
     $totalBookCount = sizeof($booksView->result);
 
     //calculate the number of books per column
-    $tolerance = 1;
+    $tolerance = 2;
     $booksPerColumn = floor($totalBookCount/5) + $tolerance;
 
 

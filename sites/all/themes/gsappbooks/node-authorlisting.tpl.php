@@ -20,7 +20,7 @@
     $totalAuhtorCount = sizeof($authorsView->result);
 
     //calculate the number of books per column
-    $tolerance = 1;
+    $tolerance = 2;
     $authorsPerColumn = floor($totalAuhtorCount/5) + $tolerance;
 
 
