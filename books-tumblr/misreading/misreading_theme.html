@@ -66,14 +66,14 @@
     <script type="text/javascript" src="http://www.columbia.edu/cu/arch/books/misreading/arrow_top.js"></script>
     <script type="text/javascript" src="http://www.columbia.edu/cu/arch/books/misreading/truncator.js"></script>
     <script type="text/javascript" src="http://www.columbia.edu/cu/arch/books/misreading/jquery.infinitescroll.min.js"></script>
-	<script type="text/javascript" src="http://www.columbia.edu/cu/arch/books/misreading/misreading.js"></script>
+    <script type="text/javascript" src="http://www.columbia.edu/cu/arch/books/misreading/misreading.js"></script>
 
 	<!-- fonts.com Fute font -->
 	<script type="text/javascript" src="http://fast.fonts.com/jsapi/709d5c75-086f-4337-aa2d-9c2ed878ed64.js"></script>
   </head> 
   
 
-  <body class="misreading-visible reading-visible {block:PermalinkPage}permalink-page{/block:PermalinkPage}"> 
+  <body class="misreading-visible reading-visible{block:PermalinkPage} permalink-page{/block:PermalinkPage}{block:IndexPage} index-page{/block:IndexPage} "> 
   
   
 
@@ -130,7 +130,7 @@
 
     {block:Posts}
 	<div class="post">
-		<div class="post-date"><a href="{Permalink}">{block:Date}{MonthNumberWithZero}.{DayOfMonthWithZero}.{Year}{/block:Date}</a></div>
+		<div class="post-date"><a href="{Permalink}" class="permalink-link">{block:Date}{MonthNumberWithZero}.{DayOfMonthWithZero}.{Year}{/block:Date}</a></div>
 		
 		
 		
