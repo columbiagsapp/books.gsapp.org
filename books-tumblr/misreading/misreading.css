@@ -249,8 +249,8 @@ html[xmlns] .clearfix {
   text-align: left;
 }
 
-.post .text img,
-.post .caption img{
+.index-page .post .text img,
+.index-page .post .caption img{
   text-align: left;
   margin:20px 0 20px 50px;
 }
@@ -296,10 +296,16 @@ a:hover.tag, a:hover.tags {
   border-bottom: solid 1px !important;
 }
 
-.post .embed-container object,
-.post .embed-container iframe{
+.index-page .post .embed-container object,
+.index-page .post .embed-container iframe{
   max-width: 300px;
   height:auto;
+}
+
+.permalink-page .post .embed-container object,
+.permalink-page .post .embed-container iframe{
+  width:500px;
+  max-width: 500px;
 }
 
 .post .photoset,
@@ -313,12 +319,17 @@ a:hover.tag, a:hover.tags {
 /* permalink page */
 .permalink-page #main,
 .permalink-page .post, 
-.permalink-page .post img {
+.permalink-page .post img,
+.permalink-page .post .embed-container iframe{
   width:500px;
 }
 
-.permalink-page .post .text img {
+.permalink-page .post .text img{
   margin:0;
+}
+
+.permalink-page .video .embed-container{
+  margin-left:0;
 }
 
 .permalink-page #filters{

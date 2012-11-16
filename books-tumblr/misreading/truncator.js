@@ -22,7 +22,7 @@
 
       truncated_node.insertAfter(full_node);
 
-      var permalink = $(this).closest('.post').children('.hidden-permalink').attr('href');
+      var permalink = $(this).closest('.post').find('.post-date .permalink-link').attr('href');
       
 	  
       findNodeForMore(truncated_node).append('<div class="read-more"><div class="elipsis">...</div><a href="'+permalink+'">Read More</a></div>');
