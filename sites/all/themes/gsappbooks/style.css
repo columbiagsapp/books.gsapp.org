@@ -1142,3 +1142,8 @@ div.view div.views-admin-links li a {
 .view-book-by-author{
   float:left;
 }
+
+.search-results dd {
+  width: 470px;
+  margin: 1em auto 2em;
+}
