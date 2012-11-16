@@ -226,6 +226,34 @@ $(document).ready(function () {
 		});
 	}
 
+	if($('.view-book-by-author').length > 0){
+		var num = $('.view-book-by-author .view-content .views-row', this).length;
+		console.log('num: '+num);
+
+		$('.view-book-by-author .view-content .views-row').each(function(i){
+			console.log('i: '+i);
+			switch(num){
+				case 1:
+					if(i == 0){
+						$(this).css('marginRight', 0);
+					}
+					$('#person-books').width('265px');
+					break;
+				case 2:
+					if(i == 1){
+						$(this).css('marginRight', 0);
+					}
+					$('#person-books').width('550px');
+					break;
+				default:
+					if((i+1)%3 == 0){
+						$(this).css('marginRight', 0);
+					}
+					break;
+			}
+		});
+	}
+
 	if($('#person-books').length > 0){
 			var num = $('.views-row').length;
 			switch(num){

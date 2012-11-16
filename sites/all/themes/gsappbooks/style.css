@@ -1138,3 +1138,7 @@ div.view div.views-admin-links li a {
 #search-form{
   display: none;
 }
+
+.view-book-by-author{
+  float:left;
+}
