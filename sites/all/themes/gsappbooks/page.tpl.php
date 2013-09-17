@@ -7,7 +7,7 @@
   <?php print $head; ?>
   <!-- Set the viewport width to device width for mobile -->
   <meta name="viewport" content="width=device-width" />
-  <title><?php print $head_title; ?></title>
+  <title>GSAPP Books</title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
   <!-- IE Fix for HTML5 Tags -->
