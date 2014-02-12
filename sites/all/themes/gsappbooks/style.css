@@ -74,7 +74,7 @@ h2{
   text-align: center;
 }
 
-.series-book-title,
+.serials-book-title,
 .buell-book-title{
   font-size:14px;
   line-height: 20px;
@@ -145,7 +145,7 @@ th { padding-right: 1em; }
 #main {
   margin: 0 auto;
   text-align: center;
-  width:835px; /*855px;*/
+  width:870px; /*855px;*/
   padding: 210px 0 0 0;/*185px 0 0 20px;*/
 }
 
@@ -289,7 +289,7 @@ div#edit-search-block-form-1-wrapper label {
   text-align: center;
   font-size: 14px;
   line-height: 16px;
-  width:478px;
+  width:380px;
   padding-top: 12px;
 }
 
@@ -758,7 +758,7 @@ div.view div.views-admin-links li a {
   float:left;
   margin-right:20px;
   margin-bottom:20px;
-  max-width: 265px;
+  max-width: 270px;
 }
 
 #lightbox #imageDataContainer{
