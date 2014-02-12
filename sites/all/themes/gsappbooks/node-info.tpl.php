@@ -38,15 +38,15 @@
     print '<div id="director-name">'.$node->field_director[0]['view'].',<br>Editor</div>';
   }
   
-  if( !empty($node->field_director_print[0]['view']) ){
+  if( !empty($node->field_director_print[0]['title']) ){
 	echo '<div id="director-print">Director of Print Publications:<br>';
-    print '<div>'.$node->field_director_print[0]['view'].'</div>';
+    print '<div>'.$node->field_director_print[0]['title'].'</div>';
 	echo '</div>';
   }
   
-  if( !empty($node->field_coordinator[0]['view']) ){
+  if( !empty($node->field_coordinator[0]['title']) ){
 	echo '<div id="coordinator">Coordinator:<br>';
-    print '<div>'.$node->field_coordinator[0]['view'].'</div>';
+    print '<div>'.$node->field_coordinator[0]['title'].'</div>';
 	echo '</div>';
   }
 
