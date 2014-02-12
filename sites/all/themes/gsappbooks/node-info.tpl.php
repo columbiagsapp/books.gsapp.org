@@ -35,11 +35,23 @@
   }
 
   if( !empty($node->field_director[0]['view']) ){
-    print '<div id="director-name">'.$node->field_director[0]['view'].',<br>Director</div>';
+    print '<div id="director-name">'.$node->field_director[0]['view'].',<br>Editor</div>';
+  }
+  
+  if( !empty($node->field_director_print[0]['view']) ){
+	echo '<div id="director-print">Director of Print Publications:<br>';
+    print '<div>'.$node->field_director_print[0]['view'].'</div>';
+	echo '</div>';
+  }
+  
+  if( !empty($node->field_coordinator[0]['view']) ){
+	echo '<div id="coordinator">Coordinator:<br>';
+    print '<div>'.$node->field_coordinator[0]['view'].'</div>';
+	echo '</div>';
   }
 
   if( !empty($node->field_assistants[0]['view']) ){
-    echo '<div id="assistants">Assistants:</br>';
+    echo '<div id="assistants">Assistants:<br>';
       for($i=0;$i<count($node->field_assistants);$i++){
         print '<div>'.$node->field_assistants[$i]['view'].'</div>';
       }
@@ -47,7 +59,7 @@
   }
 
   if( !empty($node->field_photographers[0]['view']) ){
-    echo '<div id="photographers">Photographers:</br>';
+    echo '<div id="photographers">Photographers:<br>';
       for($i=0;$i<count($node->field_photographers);$i++){
         print '<div>'.$node->field_photographers[$i]['view'].'</div>';
       }
