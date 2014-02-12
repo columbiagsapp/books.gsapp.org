@@ -1106,7 +1106,9 @@ div.view div.views-admin-links li a {
 #poster-slider,
 #ordering-title,
 #assistants,
-#distributed-title{
+#distributed-title,
+#director-print,
+#coordinator{
   margin-bottom:14px;
 }
 
