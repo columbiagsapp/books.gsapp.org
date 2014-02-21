@@ -30,7 +30,7 @@ Font sizes: 16px base font with 24px line-height
 10px = 0.625em   / 2.4         / 2.4em
 
 Equation for font sizing: 
-  Desired px ÷ Default (or parent) px = em size
+  Desired px ÃƒÆ’Ã‚Â· Default (or parent) px = em size
 ------------------------------------------------*/
 
 /**
@@ -75,7 +75,9 @@ h2{
 }
 
 .serials-book-title,
-.buell-book-title{
+.buell-book-title,
+.featured-book-title,
+.listing-book-title{
   font-size:14px;
   line-height: 20px;
   margin:35px 0 12px;
@@ -722,7 +724,9 @@ div.view div.views-admin-links li a {
 /* JOURNALS INDEX VIEW */
 .view-journals,
 .view-buell,
-.view-serials{
+.view-serials,
+.view-featured,
+.view-listing{
   clear:both;
   padding-bottom:30px;
   float:left;
@@ -731,8 +735,10 @@ div.view div.views-admin-links li a {
 }
 
 .view-journals .view-header,
+.view-featured .view-header,
 .view-buell .view-header,
-.view-serials .view-header{
+.view-serials .view-header,
+.view-listing .view-header{
   width:417px;
   text-align: center;
   margin:0 auto;
@@ -741,7 +747,9 @@ div.view div.views-admin-links li a {
 
 .view-journals .view-content,
 .view-buell .view-content,
-.view-serials .view-content{
+.view-serials .view-content,
+.view-featured .view-content,
+.view-listing .view-content{
   text-align: center;
   margin:0 auto;
 }
@@ -754,13 +762,19 @@ div.view div.views-admin-links li a {
 .view-journals .views-row,
 .view-serials .views-row,
 .view-buell .views-row,
+.view-featured .views-row,
+.view-listing .views-row,
 #person-books .views-row{
   float:left;
   margin-right:20px;
   margin-bottom:20px;
   max-width: 270px;
 }
-
+.view-listing .views-row{
+  max-width:none;
+  width: 270px;
+  height: 200px;
+}
 #lightbox #imageDataContainer{
   bottom: 200px;
   position: relative;
