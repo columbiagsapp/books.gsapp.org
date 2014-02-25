@@ -1,24 +1,20 @@
 $(document).ready(function () {
 
-
-
-
 	var path = window.location.pathname;
 
 	var liYear = '<li><a href="/index/year" target="_self">Year</a></li>';
 	var liTitle = '<li><a href="/index/title" target="_self">Title</a></li>';
 	var liAuthor = '<li><a href="/index/author" target="_self">Author</a></li>';
-	var liAllJournals = '<li><a href="/journals" target="_self">All</a></li>';
-	var liFutureAnterior = '<li><a href="/journals/future-anterior" target="_self">Future Anterior</a></li>';
-	var liPotlatch = '<li><a href="/journals/potlatch" target="_self">Potlatch</a></li>';
-	var liUrbanMagazine = '<li><a href="/journals/urban-magazine" target="_self">Urban Magazine</a></li>';
-	var liVolume = '<li><a href="/journals/volume" target="_self">Volume</a></li>';
-	var liAllSeries = '<li><a href="/series" target="_self">All</a></li>';
-	var liAbstract = '<li><a href="/series/abstract" target="_self">Abstract</a></li>';
-	var liLivingArchive = '<li><a href="/series/living-archive" target="_self">Living Archive</a></li>';
-	var liCBAEM = '<li><a href="/series/cba-em" target="_self">Materials Conference</a></li>';
-	var liSourceBooks = '<li><a href="/series/source-books" target="_self">Source Books</a></li>';
-	var liNewUrbanisms = '<li><a href="/series/new-urbanisms" target="_self">New Urbanisms</a></li>';
+	var liFutureAnterior = '<li><a href="/serials/future-anterior" target="_self">Future Anterior</a></li>';
+	var liPotlatch = '<li><a href="/serials/potlatch" target="_self">Potlatch</a></li>';
+	var liUrbanMagazine = '<li><a href="/serials/urban-magazine" target="_self">Urban Magazine</a></li>';
+	var liVolume = '<li><a href="/serials/volume" target="_self">Volume</a></li>';
+	var liAllSerials = '<li><a href="/serials" target="_self">All</a></li>';
+	var liAbstract = '<li><a href="/serials/abstract" target="_self">Abstract</a></li>';
+	var liAllDigital = '<li><a href="/digital" target="_self">All</a></li>';
+	var liPrintOnDemand = '<li><a href="/category/digital/gsapp-books-print-demand" target="_self">Print on Demand</a></li>';
+	var liDigitalArchive = '<li><a href="/category/digital/digital-archive—columbia-books-architecturet" target="_self">Digital Archive</a></li>';
+	var liCUDocs = '<li><a href="/category/digital/d-columbia-documents-architecture-and-theory-1992-1997" target="_self">Columbia Documents of Architecture</a></li>';
 
 	var indexYearResize = function(){
 		console.log('resize()');
@@ -63,61 +59,56 @@ $(document).ready(function () {
 			$('#highlight').html(liAuthor);
 			$('#dropdown').html(liYear+liTitle).show();
 			break;
-		case '/journals':
-			$('.sortbox-title').text('View journals by');
-			$('#highlight').html(liAllJournals);
-			$('#dropdown').html(liFutureAnterior+liPotlatch+liUrbanMagazine+liVolume).show();
-			break;
-		case '/journals/future-anterior':
-			$('.sortbox-title').text('View journals by');
+		case '/serials/future-anterior':
+			$('.sortbox-title').text('View serials by');
 			$('#highlight').html(liFutureAnterior);
-			$('#dropdown').html(liAllJournals+liPotlatch+liUrbanMagazine+liVolume).show();
+			$('#dropdown').html(liAllSerials+liAbstract+liPotlatch+liUrbanMagazine+liVolume).show();
 			break;
-		case '/journals/potlatch':
-			$('.sortbox-title').text('View journals by');
+		case '/serials/potlatch':
+			$('.sortbox-title').text('View serials by');
 			$('#highlight').html(liPotlatch);
-			$('#dropdown').html(liAllJournals+liFutureAnterior+liUrbanMagazine+liVolume).show();
+			$('#dropdown').html(liAllSerials+liAbstract+liFutureAnterior+liUrbanMagazine+liVolume).show();
 			break;
-		case '/journals/urban-magazine':
-			$('.sortbox-title').text('View journals by');
+		case '/serials/urban-magazine':
+			$('.sortbox-title').text('View serials by');
 			$('#highlight').html(liUrbanMagazine);
-			$('#dropdown').html(liAllJournals+liFutureAnterior+liPotlatch+liVolume).show();
+			$('#dropdown').html(liAllSerials+liAbstract+liFutureAnterior+liPotlatch+liVolume).show();
 			break;
-		case '/journals/volume':
-			$('.sortbox-title').text('View journals by');
+		case '/serials/volume':
+			$('.sortbox-title').text('View serials by');
 			$('#highlight').html(liVolume);
-			$('#dropdown').html(liAllJournals+liFutureAnterior+liPotlatch+liUrbanMagazine).show();
+			$('#dropdown').html(liAllSerials+liAbstract+liFutureAnterior+liPotlatch+liUrbanMagazine).show();
 			break;
-		case '/series':
-			$('.sortbox-title').text('View series by');
-			$('#highlight').html(liAllSeries);
-			$('#dropdown').html(liAbstract+liLivingArchive+liCBAEM+liSourceBooks+liNewUrbanisms).show();
+		case '/serials':
+			$('.sortbox-title').text('View serials by');
+			$('#highlight').html(liAllSerials);
+			$('#dropdown').html(liAbstract+liFutureAnterior+liPotlatch+liUrbanMagazine+liVolume).show();
 			break;
-		case '/series/abstract':
-			$('.sortbox-title').text('View series by');
+		case '/serials/abstract':
+			$('.sortbox-title').text('View serials by');
 			$('#highlight').html(liAbstract);
-			$('#dropdown').html(liAllSeries+liLivingArchive+liCBAEM+liSourceBooks+liNewUrbanisms).show();
+			$('#dropdown').html(liAllSerials+liFutureAnterior+liPotlatch+liUrbanMagazine+liVolume).show();
 			break;
-		case '/series/living-archive':
-			$('.sortbox-title').text('View series by');
-			$('#highlight').html(liLivingArchive);
-			$('#dropdown').html(liAllSeries+liAbstract+liCBAEM+liSourceBooks+liNewUrbanisms).show();
+		case '/digital':
+			$('.sortbox-title').text('View digital by');
+			$('#highlight').html(liAllDigital);
+			$('#dropdown').html(liPrintOnDemand+liDigitalArchive+liCUDocs).show();
+			break;	
+		/*case '/category/digital/gsapp-books-print-demand':
+			$('.sortbox-title').text('View digital by');
+			$('#highlight').html(liPrintOnDemand);
+			$('#dropdown').html(liAllDigital+liDigitalArchive+liCUDocs).show();
 			break;
-		case '/series/cba-em':
-			$('.sortbox-title').text('View series by');
-			$('#highlight').html(liCBAEM);
-			$('#dropdown').html(liAllSeries+liAbstract+liLivingArchive+liSourceBooks+liNewUrbanisms).show();
+		case '/category/digital/digital-archive—columbia-books-architecture':
+			$('.sortbox-title').text('View digital by');
+			$('#highlight').html(liDigitalArchive);
+			$('#dropdown').html(liAllDigital+liPrintOnDemand+liCUDocs).show();
 			break;
-		case '/series/source-books':
-			$('.sortbox-title').text('View series by');
-			$('#highlight').html(liSourceBooks);
-			$('#dropdown').html(liAllSeries+liAbstract+liLivingArchive+liCBAEM+liNewUrbanisms).show();
-			break;
-		case '/series/new-urbanisms':
-			$('.sortbox-title').text('View series by');
-			$('#highlight').html(liNewUrbanisms);
-			$('#dropdown').html(liAllSeries+liAbstract+liLivingArchive+liCBAEM+liSourceBooks).show();
-			break;
+		case '/category/digital/d-columbia-documents-architecture-and-theory-1992-1997':
+			$('.sortbox-title').text('View digital by');
+			$('#highlight').html(liCUDocs);
+			$('#dropdown').html(liAllDigital+liPrintOnDemand+liDigitalArchive).show();
+			break;*/
 
 		default:
 			$('.sortbox-title').text('Sort index by');
