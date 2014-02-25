@@ -17,6 +17,25 @@
     ?>
   </h1>
 
+	<?php
+		//Find out if the book is in the digital (7) category
+		$isDigital=false;
+		foreach($node->taxonomy as $taxonomy)
+			{
+			if($taxonomy->vid==7)
+				{
+				$isDigital=true;
+				break;	
+				}
+			}
+		// if it is digital and the issuu embed code isn't blank, print it out	
+		if($node->field_issuu_embed[0]['value']!=NULL && $isDigital){
+			print '<div class="issuu">';
+			print $node->field_issuu_embed[0]['value']; //add wrapper for issuu embed code
+			print '</div>';
+		}
+	
+	?>
   
     <?php
       if(!empty($node->field_images)){
