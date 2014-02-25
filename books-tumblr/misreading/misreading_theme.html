@@ -4,12 +4,12 @@
 
 <title>{title}</title>
 
-<meta name="color:Text" content="#3F3F3F"/>
+<meta name="color:Text" content="#000000"/>
 <meta name="color:Background" content="#fffff"/>
-<!--<meta name="color:Link" content="#4B4B4B" />
-<meta name="color:Link Hover" content="#F7F7F7" />
+<meta name="color:Link" content="#000000" />
+<meta name="color:Link Hover" content="#000000" />
 <meta name="color:Header Background" content="#FFFFFF"/>
-<meta name="color:Navigation Link Color" content="#00000"/>-->
+<meta name="color:Navigation Link Color" content="#00000"/>
 <meta name="color:ScrollBar" content="#000000"/>
 <meta name="color:Description Background Hover" content="#E4E4E4"/>
 <meta name="color:Perma Background" content="#00000"/>
@@ -35,7 +35,8 @@
 <link href='http://fonts.googleapis.com/css?family=Raleway:100&v1' rel='stylesheet' type='text/css'>
 
 
-
+<script type="text/javascript" src="http://www.columbia.edu/cu/arch/books/misreading/misreading.js"></script>
+<script type="text/javascript" src="http://fast.fonts.com/jsapi/709d5c75-086f-4337-aa2d-9c2ed878ed64.js"></script>
 <link rel="shortcut icon" href="{Favicon}">
 <link rel="alternate" type="application/rss+xml" href="{RSS}">
 {block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
@@ -55,8 +56,8 @@
     <script type="text/javascript" src="http://www.columbia.edu/cu/arch/books/misreading/arrow_top.js"></script>
     <script type="text/javascript" src="http://www.columbia.edu/cu/arch/books/misreading/truncator.js"></script>
     <script type="text/javascript" src="http://www.columbia.edu/cu/arch/books/misreading/jquery.infinitescroll.min.js"></script>
-    <script type="text/javascript" src="http://www.columbia.edu/cu/arch/books/misreading/misreading.js"></script>
-    	<script type="text/javascript" src="http://fast.fonts.com/jsapi/709d5c75-086f-4337-aa2d-9c2ed878ed64.js"></script>
+    
+    	
 
 <script type="text/javascript">
 
@@ -109,9 +110,9 @@ return true;
 <style type="text/css">
 body {
   background: #fff;
-  color:black;
+  color:black; 
   font-weight: normal !important;
-  font: 11px/16px 'Fute PL W01 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 10px/15px 'Fute PL W01 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -146,14 +147,14 @@ img:hover {border-radius:15px; -moz-border-radius:15px; -webkit-transition-durat
 #center { width:960px;
       margin:0 auto;
       padding-top:10px;
-      text-align: center;}
+      text-align: left;}
 {/block:IndexPage}
 
 {block:PermalinkPage}
 #center { width:960px;
       margin:0 auto;
       padding-top:10px;
-      text-align: center;}
+      text-align: left;}
 {/block:PermalinkPage}
 
 .entry {padding:10px; float:left; position: relative; margin:10px; width: 270px; float: left; background-color:{color:Entry Background};}
@@ -175,8 +176,6 @@ background-color: #000;
 }
 
 .posttitle{
-color:{font:color};
-font-family:{font:body};
 font-size:12px;
 line-height:19px;
 letter-spacing:1px;
@@ -185,17 +184,16 @@ font-weight:bold;
 text-transform:Uppercase;
 margin:0px;
 padding:0px;
-text-align:;
 }
-.permalink {opacity:1; text-align:left; font-family:{font:body}; font-size:8px; text-transform:Uppercase; padding:0px; }
+.permalink {opacity:1; text-align:left; font-size:8px; text-transform:Uppercase; padding:0px; }
 .permalink:hover {background-color:{color:Perma Background}; font-weight:bold; opacity:1; -moz-transition: 0.9s ease-in; -webkit-transition: 0.8s ease-in; -o-transition: 0.9s ease-in; transition: 0.9s ease-in; padding:3px; width:70px;}
 a:link, a:active, a:visited{ color: {color:link}; text-decoration:none;}
-a:hover{ color:{color:link}; text-decoration:underline;}
+a:hover{text-decoration:underline;}
 .label {font-weight: bold; margin-right: 10px;}
 #posts {padding: 140px 10px;}
 #links {z-index:1000; position:fixed;letter-spacing:3px; top:30px; margin-left:700px; width:300px; text-align:center;}
 #links a {text-transform: lowercase; 
-font-family: {font:body}; 
+ 
 font-weight: bold; font-size: 13px; opacity: .8; 
 -webkit-transition-duration: .3s;}
 .notes img{ top:1px; width:10px; position:relative;}
@@ -320,7 +318,6 @@ h1{
       line-height: 20px;
       text-align: center;
       margin: 0 auto 18px;
-      color:blue;
     }
 
     h1 a:hover{
@@ -389,12 +386,12 @@ h1{
     }
 #navigation {
   clear: both;
-  margin: 0 auto;
+  margin: 0 260px;
   padding: 0;
   text-align: center;
   font-size: 14px;
   line-height: 16px;
-  width:760px;
+  width:380px;
   padding-top: 12px;
 }
 
@@ -425,13 +422,10 @@ h1{
 }
     #logo{
       float:left;
-      margin:40px 0 0 213px;
-		  border-bottom: none !important;
-    font-size:40px;
+      margin:14px 0 0 213px;
+	 border-bottom: none !important;
 	}
-#logo img{
-    display:none;
-}
+
 </style>
 
 
@@ -454,11 +448,11 @@ h1{
 			    <input class="hidden" type="submit" value="Search"/>
 			</form>
 		</div><!-- /#search-container -->
-		<a id="logo" href="/"><img src="http://www.columbia.edu/cu/arch/books/assets/Books-logo.png">{Title}</a>
+		<a id="logo" href="http://books.gsapp.org"><img src="http://books.gsapp.org/sites/default/files/gsappbooks_logo.png" /></a>
 		<div id="navigation">
 			<ul class="menu">
-			    <li><a href="http://books.gsapp.org">Home</a></li>
-				<li><a href="http://books.gsapp.org/info">Info</a></li>
+			   	<li><a href="http://books.gsapp.org/info">Info</a></li>
+			   	 <li><a href="/">News</a></li>
 				<li><a href="http://books.gsapp.org/featured">Featured</a></li>
 				<li><a href="http://books.gsapp.org/serials">Serial</a></li>
 				<li><a href="http://books.gsapp.org/buell">Buell</a></li>
