@@ -6,16 +6,14 @@
 
 <meta name="color:Text" content="#3F3F3F"/>
 <meta name="color:Background" content="#fffff"/>
-<meta name="color:Link" content="#4B4B4B" />
+<!--<meta name="color:Link" content="#4B4B4B" />
 <meta name="color:Link Hover" content="#F7F7F7" />
 <meta name="color:Header Background" content="#FFFFFF"/>
-<meta name="color:Navigation Link Color" content="#00000"/>
+<meta name="color:Navigation Link Color" content="#00000"/>-->
 <meta name="color:ScrollBar" content="#000000"/>
 <meta name="color:Description Background Hover" content="#E4E4E4"/>
 <meta name="color:Perma Background" content="#00000"/>
 <meta name="color:Entry Background" content="#F2F2F2"/>
-<meta name="font:Body" content="Arial" />
-<meta name="font:Header" content="Arial"/>
 <meta name="text:Custom Link One" content="" />
 <meta name="text:Custom Link One Title" content="" />
 <meta name="text:Custom Link Two" content="" />
@@ -43,8 +41,6 @@
 {block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js" type="text/javascript"><!--mce:0--></script>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js" type="text/javascript"><!--mce:0--></script>
-
 
 
 
@@ -56,13 +52,16 @@
 
 {block:IfInfiniteScrolling}<script src="http://static.tumblr.com/twte3d7/0pellzh2t/infinitescroll.js"></script>{/block:IfInfiniteScrolling}
 
+    <script type="text/javascript" src="http://www.columbia.edu/cu/arch/books/misreading/arrow_top.js"></script>
+    <script type="text/javascript" src="http://www.columbia.edu/cu/arch/books/misreading/truncator.js"></script>
+    <script type="text/javascript" src="http://www.columbia.edu/cu/arch/books/misreading/jquery.infinitescroll.min.js"></script>
+    <script type="text/javascript" src="http://www.columbia.edu/cu/arch/books/misreading/misreading.js"></script>
+    	<script type="text/javascript" src="http://fast.fonts.com/jsapi/709d5c75-086f-4337-aa2d-9c2ed878ed64.js"></script>
 
 <script type="text/javascript">
 
 $(window).load(function () {
-
 $('#posts').masonry(),
-
 $('.masonryWrap').infinitescroll({
 
 navSelector : "#pagination",
@@ -107,48 +106,58 @@ return true;
 </script>{/block:IfDropDownDescription}
 
 
-
-
-
-
 <style type="text/css">
-
+body {
+  background: #fff;
+  color:black;
+  font-weight: normal !important;
+  font: 11px/16px 'Fute PL W01 Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 {block:IndexPage}
-
 img:hover {
-
 opacity:0.6; 
-
 -moz-transition: 0.2s ease-in;
-
 -webkit-transition: 0.2s ease-in;
-
 -o-transition: 0.2s ease-in;
-
 transition: 0.2s ease-in;
 }
-
 img {
 -webkit-transition: opacity 0.7s linear; 
 opacity: 1;
-}{/block:IndexPage}
+}
+{/block:IndexPage}
 
-{block:IndexPage}{block:ifImagePop}img, img a {border: none; -webkit-transition-duration: .4s;}
+{block:IndexPage}
+{block:ifImagePop}
+img, img a {border: none; -webkit-transition-duration: .4s;}
+img:hover {-webkit-transform: scale(1.05);}
+{/block:ifImagePop}
+{/block:IndexPage}
 
-img:hover {-webkit-transform: scale(1.05);}{/block:ifImagePop}{/block:IndexPage}
+{block:IfRoundedPhotoEdgesHover}
+img:hover {border-radius:15px; -moz-border-radius:15px; -webkit-transition-duration: .4s;}
+{/block:IfRoundedPhotoEdgesHover}
 
-{block:IfRoundedPhotoEdgesHover}img:hover {border-radius:15px; -moz-border-radius:15px; -webkit-transition-duration: .4s;}{/block:IfRoundedPhotoEdgesHover}
 
-body {font-family:{font:body}; font-size: 10px; line-height:13px; color: {color:text}; background-color: {color:background};background-image:url('{image:Background}'); background-attachment: fixed;}
 
-{block:IndexPage}#center {margin:auto; width: 960px; margin-top: 150px; margin-bottom: -8px;}{/block:IndexPage}
+{block:IndexPage}
+#center { width:960px;
+      margin:0 auto;
+      padding-top:10px;
+      text-align: center;}
+{/block:IndexPage}
 
-{block:PermalinkPage}#center {margin:auto; width: 960px; margin-top: 150px; margin-bottom: -8px;}{/block:PermalinkPage}
+{block:PermalinkPage}
+#center { width:960px;
+      margin:0 auto;
+      padding-top:10px;
+      text-align: center;}
+{/block:PermalinkPage}
 
-.entry { padding:10px; float:left; position: relative; margin:10px; width: 270px; float: left; background-color:{color:Entry Background};}
-
+.entry {padding:10px; float:left; position: relative; margin:10px; width: 270px; float: left; background-color:{color:Entry Background};}
 .entry img {width: 270px; height: auto;}
-
 .navigations{
 margin-top:1px;
 margin-bottom:20px;
@@ -165,8 +174,6 @@ color: #fff;
 background-color: #000;
 }
 
-
-
 .posttitle{
 color:{font:color};
 font-family:{font:body};
@@ -180,110 +187,255 @@ margin:0px;
 padding:0px;
 text-align:;
 }
-
 .permalink {opacity:1; text-align:left; font-family:{font:body}; font-size:8px; text-transform:Uppercase; padding:0px; }
-
 .permalink:hover {background-color:{color:Perma Background}; font-weight:bold; opacity:1; -moz-transition: 0.9s ease-in; -webkit-transition: 0.8s ease-in; -o-transition: 0.9s ease-in; transition: 0.9s ease-in; padding:3px; width:70px;}
-
-a:link, a:active, a:visited{ color: {color:link}; text-decoration:none; -moz-transition: 0.9s ease-in; -webkit-transition: 0.9s ease-in; -o-transition: 0.9s ease-in; transition: 0.9s ease-in;}
-
-a:hover{ color:{color:link hover}; -moz-transition: 0.9s ease-in; -webkit-transition: 0.9s ease-in; -o-transition: 0.9s ease-in; transition: 0.9s ease-in;}
-
+a:link, a:active, a:visited{ color: {color:link}; text-decoration:none;}
+a:hover{ color:{color:link}; text-decoration:underline;}
 .label {font-weight: bold; margin-right: 10px;}
-
-#posts {padding: 10px;}
-
+#posts {padding: 140px 10px;}
 #links {z-index:1000; position:fixed;letter-spacing:3px; top:30px; margin-left:700px; width:300px; text-align:center;}
-
 #links a {text-transform: lowercase; 
 font-family: {font:body}; 
 font-weight: bold; font-size: 13px; opacity: .8; 
 -webkit-transition-duration: .3s;}
-
 .notes img{ top:1px; width:10px; position:relative;}
 ol.notes, .notes li{list-style:none; margin:0px; padding:0px;}
 iframe input, iframe submit, iframe textarea, iframe div, iframe table {background-color:transparent!important;}
-
 .permacap {text-transform:uppercase; font-size:12px; font-weight:bold;}
-
 
 #pagination{
 margin-right:-20%;
 text-align: center;
 position:fixed;
 bottom:5px;
-{block:IfInfiniteScrolling}display: none;{/block:IfInfiniteScrolling}
+{block:IfInfiniteScrolling}
+display: none;
+{/block:IfInfiniteScrolling}
 }
+
 #pagination a{
 background-color: #000;
 padding: 3px;
 color: #fff;
-{block:IfInfiniteScrolling}display: none;{/block:IfInfiniteScrolling}
+{block:IfInfiniteScrolling}
+display: none;
+{/block:IfInfiniteScrolling}
 }
-
 
 ::-webkit-scrollbar-thumb:vertical { border-radius:15px; -moz-border-radius:15px; background-color: {color:scrollbar}; height:100px;}
-
 ::-webkit-scrollbar-thumb:horizontal {border-radius:15px; -moz-border-radius:15px; background-color: {color:Scrollbar}; height:10px !important;}
-
 ::-webkit-scrollbar { border-radius:15px; -moz-border-radius:15px; height:10px; width:7px; background-color: {color:background};}
 
+
 {block:PermalinkPage}
-
-
-
-
 .entry {margin: 10px; width: 500px; float: left;}
-
 .entry img {width: 500px; height: auto;}
-
 .audio {width: 500px; background-color:#000000; padding:0px;}
-
 {/block:PermalinkPage}
 
-{block:indexpage} .photoset{width:270px; heigh:auto;}{/block:Indexpage}
+{block:IndexPage}
+.photoset{width:270px; heigh:auto;}
+{/block:IndexPage}
 
-{block:Indexpage}.album img{width:270px; height:auto;}
-.audio {width: 270px; background-color:#000000; padding:0px;}{/block:Indexpage}
+{block:IndexPage}
+.album img{width:270px; height:auto;}
+.audio {width: 270px; background-color:#000000; padding:0px;}
+{/block:IndexPage}
 
-{block:Permalinkpage}.album img{width:500px; height:auto;}
-.audio {width: 500px; background-color:#000000; padding:0px;}{/block:Permalinkpage}
+{block:Permalinkpage}
+.album img{width:500px; height:auto;}
+.audio {width: 500px; background-color:#000000; padding:0px;}
+{/block:Permalinkpage}
 
-
-
-.header {z-index:1000; position:fixed; opacity:0.8; filter:alpha(opacity=90); background:{color:header background}; padding: 30px 0 25px 0; text-transform:uppercase; top:-10px; margin:auto; width:960px; padding:20px;}
-
+.header {z-index:1000; opacity:0.8; filter:alpha(opacity=90); background:{color:header background}; padding: 30px 0 25px 0; text-transform:uppercase; top:-10px; margin:auto; width:960px; padding:20px;}
 .header a, .header a:hover { border:none; color:#000;}
-
 .blogtitle { 
-
 letter-spacing:-1px; 
-
 -webkit-text-stroke: 1px transparent; 
-
 font-size: 40px; 
-
 font-weight:800; 
-
 font-family:{font:Header};
-
 text-transform:uppercase; 
-
 }
-
 .description{
 opacity:0.8; filter:alpha(opacity=80); background:#fff; text-align:left; padding: 20px 0 15px 0; top:80px; margin:auto; width:700px; position:fixed; padding:5px; z-index:1000; }
-
 .description:hover {background-color:{color:Description Background Hover}; -moz-transition: 0.8s ease-in; -webkit-transition: 0.8s ease-in; -o-transition: 0.8s ease-in; transition: 0.8s ease-in; }
 
-
-
+ /* Styling based on Tumblr customizable inputs */
+    
+    {block:IfDisqusShortname}
+    /* Styling for Disqus comments */
+    div#disqus_thread {
+      width: 480px; margin: 0 auto;
+      padding-right: 60px;
+      margin-bottom: 2em;
+      margin-top: -1em;
+    }
+    
+    div#disqus_thread h3 {
+      margin-bottom: 1.5em;
+    }
+    
+    div#disqus_thread div#dsq-comments-title { margin-top: 3em; }
+    
+    body#with-disqus div#it.post {
+      margin-top: 0;
+    }
+    
+    body#with-disqus h1 {
+      margin-bottom: -2em;
+    }
+    
+    body#with-disqus div.realpost {
+      margin-bottom: 0; padding-bottom: 0;
+    }
+    
+    .dsq-comment-header-meta {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    p#powered-by-disqus {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10px;
+      margin-top: 2em;
+      text-transform: uppercase;
+    }
+    
+    div#disqus_thread .dsq-options {
+      display: none;
+    }
+    {/block:IfDisqusShortname}
+    
 
 {customcss}
+h1{
+      margin-bottom:20px;
+    }
 
+    h1 a {
+    	color: #000; line-height: 1.2;
+    	text-decoration: none;
+      border-bottom: 2px solid;
+    	font-size: 24px;
+      line-height: 20px;
+      text-align: center;
+      margin: 0 auto 18px;
+      color:blue;
+    }
 
+    h1 a:hover{
+      cursor:pointer;
+    }
+    
 
+    h2, h2 a { 
+    	font-size:14px;
+      line-height: 20px;
+      border:none !important;
+      margin:0;
+    }
+
+    h1,h2,h3,h4,h5,h6,b,strong{
+      font-weight: normal !important;
+    }
+
+    a {
+    	text-decoration: none; 
+      color: blue;
+    	border-bottom: 2px solid;
+    } 
+    
+    a:hover { 
+      border-bottom: none !important;
+    }
+
+    .post-date a{
+      border:none !important;
+    }
+
+    /* 858585 */
+    a img { 
+    outline: 0; 
+    border: none; 
+    }
+    #header {
+      width:100%;
+      height: 180px;
+      position: fixed;
+      overflow: hidden;
+      margin-bottom:100px;
+      z-index: 1000;
+    }
+
+    #header-inside{
+      text-align: center;
+      margin:0 auto;
+      z-index: 9999;
+      background: transparent url("http://www.columbia.edu/cu/arch/books/assets/rhinoBG.png") no-repeat 0 0;
+    }
+
+    #search-container{
+      text-align: left;
+      display: block;
+      width: 149px;
+      padding:26px 0 0 0;
+      float: left;
+      font-size:11px;
+      line-height: 15px;
+    }
+
+    #search-container input{
+      width: 145px;
+    }
+#navigation {
+  clear: both;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 16px;
+  width:760px;
+  padding-top: 12px;
+}
+
+#navigation ul {
+  list-style: none !important;
+  margin: 0;
+  padding: 0;
+}
+
+#navigation ul li,
+#navigation ul li.leaf {
+  float: left;
+  margin: 0 8px 0 8px;
+  padding: 0;
+  list-style: none !important;
+}
+
+#navigation ul li a {
+  display: block;
+  border: none;
+  padding: 0;
+}
+
+#navigation ul li a:hover,
+#navigation ul li a:active,
+#navigation ul li a.active{
+  border-bottom: 2px solid !important;
+}
+    #logo{
+      float:left;
+      margin:40px 0 0 213px;
+		  border-bottom: none !important;
+    font-size:40px;
+	}
+#logo img{
+    display:none;
+}
 </style>
+
+
+    <!-- fonts.com Fute font -->
 
 
 </head>
@@ -293,54 +445,31 @@ opacity:0.8; filter:alpha(opacity=80); background:#fff; text-align:left; padding
 <div id="center">
 
 
-<div class="header"><div class="blogtitle">{title}<br></div></div><div class="description">
-{block:Description}{Description}{/block:Description}
-
-</div>
-
-<div id="links">
-<center> <a href="/">Home</a> {block:AskEnabled}<a href="/ask">{AskLabel}</a>{/block:AskEnabled} <a href="/archive">Archive</a> <a href="{RSS}">RSS</a> {block:HasPages}{block:Pages}<a href="{URL}">{Label}</a>{/block:Pages}{/block:HasPages} <a href="http://www.venoms.tumblr.com">Credit</a></center>
-<br>
-<center>{block:IfCustomLinkOneTitle} 
-
-<a href="{text:Custom Link One}"> {text:Custom Link One Title}</a> 
-
-{/block:ifCustomLinkOneTitle} 
-
-
-
-{block:ifCustomLinkTwoTitle}
-
-<a href="{text:Custom Link Two}"> {text:Custom Link Two Title}</a> 
-
-{/block:ifCustomLinkTwoTitle}
-
-
-{block:ifCustomLinkThreeTitle}
-
-<a href="{text:Custom Link Three}"> {text:Custom Link Three Title}</a> {/block:ifCustomLinkThreeTitle}
-
-
-
-{block:ifCustomLinkFourTitle}
-
-<a href="{text:Custom Link Four}">{text:Custom Link Four Title}</a> {/block:ifCustomLinkFourTitle}</center>
-
-
+  <div id="header">
+  	<div id="header-inside">
+	  	<div id="search-container">
+	  		Search Misreading
+		  	<form action="/search" method="get">
+			    <input type="text" name="q" value="{SearchQuery}"/>
+			    <input class="hidden" type="submit" value="Search"/>
+			</form>
+		</div><!-- /#search-container -->
+		<a id="logo" href="/"><img src="http://www.columbia.edu/cu/arch/books/assets/Books-logo.png">{Title}</a>
+		<div id="navigation">
+			<ul class="menu">
+			    <li><a href="http://books.gsapp.org">Home</a></li>
+				<li><a href="http://books.gsapp.org/info">Info</a></li>
+				<li><a href="http://books.gsapp.org/featured">Featured</a></li>
+				<li><a href="http://books.gsapp.org/serials">Serial</a></li>
+				<li><a href="http://books.gsapp.org/buell">Buell</a></li>
+				<li><a href="http://books.gsapp.org/digital">Digital</a></li>
+			</ul>
+		</div>
+	</div>
 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-<br>
+<br />
 
 <div id="posts">
 
@@ -349,7 +478,7 @@ opacity:0.8; filter:alpha(opacity=80); background:#fff; text-align:left; padding
 {block:Text}
 <div class="entry">
 {block:Title}<a href="{Permalink}"><div class="posttitle">{Title}</a></div>{/block:Title}<div class="bod">{Body}</div>
-{block:IndexPage}<a href="{Permalink}"><div class="permalink">Permalink</div></a>{/block:IndexPage}{block:Permalinkpage}<b>{timeago} | This post has {NoteCountWithLabel}</b><br><br>{/block:Permalinkpage}
+{block:IndexPage}<a href="{Permalink}"><div class="permalink">Permalink</div></a>{/block:IndexPage}{block:Permalinkpage}<b>{timeago} | This post has {NoteCountWithLabel}</b><br /><br />{/block:Permalinkpage}
 </div>
 {/block:Text}
 
@@ -361,7 +490,7 @@ opacity:0.8; filter:alpha(opacity=80); background:#fff; text-align:left; padding
 <img src="{block:IndexPage}{PhotoURL-HighRes}{/block:IndexPage}{block:PermalinkPage}{PhotoURL-HighRes}{/block:PermalinkPage}" alt="{PhotoAlt}" {block:PermalinkPage}width="200px"{/block:PermalinkPage}/>
 {block:IndexPage}</a>{/block:IndexPage}{block:ifShadowsOnPosts}<img src="http://static.tumblr.com/twte3d7/sH5loxo9q/shadow.png">{/block:ifShadowsOnPosts}
 {block:PermalinkPage}{LinkCloseTag}{/block:PermalinkPage}</div>
-{block:Permalinkpage}{block:Caption}{Caption}{/block:Caption}<div class="permacap">{timeago} | This post has {NoteCountWithLabel}</div></b><br><br>{/block:Permalinkpage}
+{block:Permalinkpage}{block:Caption}{Caption}{/block:Caption}<div class="permacap">{timeago} | This post has {NoteCountWithLabel}</div></b><br /><br />{/block:Permalinkpage}
 
 {/block:Photo}
 
@@ -372,7 +501,7 @@ opacity:0.8; filter:alpha(opacity=80); background:#fff; text-align:left; padding
 <div class="photoset">{block:Indexpage}{Photoset-250}{/block:Indexpage}</div>{block:PermalinkPage}{Photoset-500}{/block:PermalinkPage}
 <a href="{Permalink}"><div class="permalink">Photoset</div></a>
 {block:PermalinkPage}{block:Caption}<div class="caption">{Caption}</div>
-{/block:Caption}<b><div class="permacap">{timeago} | This post has {NoteCountWithLabel}</div></b><br><br>{/block:PermalinkPage}
+{/block:Caption}<b><div class="permacap">{timeago} | This post has {NoteCountWithLabel}</div></b><br /><br />{/block:PermalinkPage}
 </div>
 {/block:Photoset}
 
@@ -383,7 +512,7 @@ opacity:0.8; filter:alpha(opacity=80); background:#fff; text-align:left; padding
 <div class="entry" id="answer">
 <div style="padding-bottom:15px"><span style="font-weight: bold; margin-right: 10px;">{Asker}:</span> "{Question}"</div>
 <div style="border-top: 1px solid #0000">{Answer}</div>
-{block:IndexPage}<a href="{Permalink}"><div class="permalink">Permalink</div></a>{/block:IndexPage}{block:PermalinkPage}<b><div class="permacap">{timeago} | This post has {NoteCountWithLabel}</div></b><br><br>{/block:PermalinkPage}
+{block:IndexPage}<a href="{Permalink}"><div class="permalink">Permalink</div></a>{/block:IndexPage}{block:PermalinkPage}<b><div class="permacap">{timeago} | This post has {NoteCountWithLabel}</div></b><br /><br />{/block:PermalinkPage}
 </div>
 {/block:Answer}
 
@@ -391,7 +520,7 @@ opacity:0.8; filter:alpha(opacity=80); background:#fff; text-align:left; padding
 <div class="entry" id="quote">
 <span style="margin-left: 13px;">{Quote}</span>
 {block:Source}<div style="font-size: 10px;">— {Source}</div>{/block:Source}
-{block:IndexPage}<a href="{Permalink}"><div class="permalink">Permalink</div></a>{/block:IndexPage}<br>{block:PermalinkPage}<b><div class="permacap">{timeago} | This post has {NoteCountWithLabel}</div></b><br><br>{/block:PermalinkPage}
+{block:IndexPage}<a href="{Permalink}"><div class="permalink">Permalink</div></a>{/block:IndexPage}<br />{block:PermalinkPage}<b><div class="permacap">{timeago} | This post has {NoteCountWithLabel}</div></b><br /><br />{/block:PermalinkPage}
 </div>
 {/block:Quote}
 
@@ -399,7 +528,7 @@ opacity:0.8; filter:alpha(opacity=80); background:#fff; text-align:left; padding
 <div class="entry">
 <a href="{URL}" class="link" {Target}><div class="posttitle">{Name}</div></a>
 {block:Description}{Description}{/block:Description}
-{block:IndexPage}<a href="{Permalink}"><div class="permalink">Permalink</div></a>{/block:IndexPage}{block:PermalinkPage}<b><div class="permacap">{timeago} | This post has {NoteCountWithLabel}</div></b><br><br>{/block:PermalinkPage}
+{block:IndexPage}<a href="{Permalink}"><div class="permalink">Permalink</div></a>{/block:IndexPage}{block:PermalinkPage}<b><div class="permacap">{timeago} | This post has {NoteCountWithLabel}</div></b><br /><br />{/block:PermalinkPage}
 </div>
 {/block:Link}
 
@@ -409,7 +538,7 @@ opacity:0.8; filter:alpha(opacity=80); background:#fff; text-align:left; padding
 {block:Lines}<span style="align:left"><div class="{Alt} user_{UserNumber}">{block:Label}
 <span class="label">{Label}</span>{/block:Label}{Line}</div>{/block:Lines}</span>
 {block:IndexPage}<a href="{Permalink}"><div class="permalink">Permalink</div></a>{/block:IndexPage}
-{block:PermalinkPage}<b><div class="permacap">{timeago} | This post has {NoteCountWithLabel}</div></b><br><br>{/block:PermalinkPage}
+{block:PermalinkPage}<b><div class="permacap">{timeago} | This post has {NoteCountWithLabel}</div></b><br /><br />{/block:PermalinkPage}
 </div>
 {/block:Chat}
 
@@ -417,7 +546,7 @@ opacity:0.8; filter:alpha(opacity=80); background:#fff; text-align:left; padding
 <div class="entry">
 {block:IndexPage}{Video-250}{block:IndexPage}
 {block:IndexPage}<a href="{Permalink}"><div class="permalink">Permalink</div></a>{/block:IndexPage}{block:PermalinkPage}{Video-500}{/block:PermalinkPage}
-{block:PermalinkPage}{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}<b><div class="permacap">{timeago} | This post has {NoteCountWithLabel}</div></b><br><br>{/block:PermalinkPage}</div>
+{block:PermalinkPage}{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}<b><div class="permacap">{timeago} | This post has {NoteCountWithLabel}</div></b><br /><br />{/block:PermalinkPage}</div>
 {/block:Video}
 
 {block:Audio}
@@ -427,7 +556,7 @@ opacity:0.8; filter:alpha(opacity=80); background:#fff; text-align:left; padding
 {/block:AlbumArt}</div>
 <div class="audio">{AudioPlayerBlack}</div>
 {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
-{block:IndexPage}<a href="{Permalink}"><div class="permalink">Permalink</div></a>{/block:IndexPage}{block:PermalinkPage}<b><div class="permacap">{timeago} | This post has {NoteCountWithLabel}</div></b><br><br>{/block:PermalinkPage}
+{block:IndexPage}<a href="{Permalink}"><div class="permalink">Permalink</div></a>{/block:IndexPage}{block:PermalinkPage}<b><div class="permacap">{timeago} | This post has {NoteCountWithLabel}</div></b><br /><br />{/block:PermalinkPage}
 </div>
 {/block:Audio}
 
@@ -446,14 +575,14 @@ opacity:0.8; filter:alpha(opacity=80); background:#fff; text-align:left; padding
 {block:PreviousPage}
 <a href="{PreviousPage}"id="previous">P R E V P A G E</a>
 {/block:PreviousPage}
-<br><br>
+<br /><br />
 
 {block:NextPage}
 <a href="{NextPage}"id="next">N E X T P A G E</a>
 {/block:NextPage}
 {/block:Pagination}
 {/block:IndexPage}
-<br><br></div>
+<br /><br /></div>
 </div>
 
 
