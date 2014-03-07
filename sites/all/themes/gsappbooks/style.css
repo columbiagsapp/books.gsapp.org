@@ -76,6 +76,7 @@ h2{
 
 .serials-book-title,
 .buell-book-title,
+.digital-book-title,
 .featured-book-title,
 .listing-book-title{
   font-size:14px;
@@ -725,6 +726,7 @@ div.view div.views-admin-links li a {
 .view-journals,
 .view-buell,
 .view-serials,
+.view-digital,
 .view-featured,
 .view-listing{
   clear:both;
@@ -737,6 +739,7 @@ div.view div.views-admin-links li a {
 .view-journals .view-header,
 .view-featured .view-header,
 .view-buell .view-header,
+.view-digital .view-header,
 .view-serials .view-header,
 .view-listing .view-header{
   width:417px;
@@ -748,6 +751,7 @@ div.view div.views-admin-links li a {
 .view-journals .view-content,
 .view-buell .view-content,
 .view-serials .view-content,
+.view-digital .view-content,
 .view-featured .view-content,
 .view-listing .view-content{
   text-align: center;
@@ -763,18 +767,19 @@ div.view div.views-admin-links li a {
 .view-serials .views-row,
 .view-buell .views-row,
 .view-featured .views-row,
+.view-digital .views-row,
 .view-listing .views-row,
 #person-books .views-row{
   float:left;
   margin-right:20px;
   margin-bottom:20px;
   max-width: 270px;
-  height:300px;
+  height:240px;
 }
 .view-listing .views-row{
   max-width:none;
   width: 270px;
-  height: 200px;
+  height: 240px;
 }
 #lightbox #imageDataContainer{
   bottom: 200px;
